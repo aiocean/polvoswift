@@ -20,380 +20,380 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct Aiocean_Polvo_V1_GetManifestUrlRequest {
+public struct Aiocean_Polvo_V1_GetManifestUrlRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var orn: String = String()
+  public var orn: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Aiocean_Polvo_V1_GetManifestUrlResponse {
+public struct Aiocean_Polvo_V1_GetManifestUrlResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var manifestURL: String = String()
+  public var manifestURL: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Aiocean_Polvo_V1_DeletePackageRequest {
+public struct Aiocean_Polvo_V1_DeletePackageRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var orn: String = String()
+  public var orn: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Aiocean_Polvo_V1_DeletePackageResponse {
+public struct Aiocean_Polvo_V1_DeletePackageResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var message: String = String()
+  public var message: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Aiocean_Polvo_V1_ListPackagesRequest {
+public struct Aiocean_Polvo_V1_ListPackagesRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Aiocean_Polvo_V1_ListPackagesResponse {
+public struct Aiocean_Polvo_V1_ListPackagesResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var packages: [Aiocean_Polvo_V1_Package] = []
+  public var packages: [Aiocean_Polvo_V1_Package] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Aiocean_Polvo_V1_GetPackageRequest {
+public struct Aiocean_Polvo_V1_GetPackageRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var orn: String = String()
+  public var orn: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Aiocean_Polvo_V1_GetPackageResponse {
+public struct Aiocean_Polvo_V1_GetPackageResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var package: Aiocean_Polvo_V1_Package {
+  public var package: Aiocean_Polvo_V1_Package {
     get {return _package ?? Aiocean_Polvo_V1_Package()}
     set {_package = newValue}
   }
   /// Returns true if `package` has been explicitly set.
-  var hasPackage: Bool {return self._package != nil}
+  public var hasPackage: Bool {return self._package != nil}
   /// Clears the value of `package`. Subsequent reads from it will return its default value.
-  mutating func clearPackage() {self._package = nil}
+  public mutating func clearPackage() {self._package = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _package: Aiocean_Polvo_V1_Package? = nil
 }
 
-struct Aiocean_Polvo_V1_CreatePackageRequest {
+public struct Aiocean_Polvo_V1_CreatePackageRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var package: Aiocean_Polvo_V1_Package {
+  public var package: Aiocean_Polvo_V1_Package {
     get {return _package ?? Aiocean_Polvo_V1_Package()}
     set {_package = newValue}
   }
   /// Returns true if `package` has been explicitly set.
-  var hasPackage: Bool {return self._package != nil}
+  public var hasPackage: Bool {return self._package != nil}
   /// Clears the value of `package`. Subsequent reads from it will return its default value.
-  mutating func clearPackage() {self._package = nil}
+  public mutating func clearPackage() {self._package = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _package: Aiocean_Polvo_V1_Package? = nil
 }
 
-struct Aiocean_Polvo_V1_CreatePackageResponse {
+public struct Aiocean_Polvo_V1_CreatePackageResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var package: Aiocean_Polvo_V1_Package {
+  public var package: Aiocean_Polvo_V1_Package {
     get {return _package ?? Aiocean_Polvo_V1_Package()}
     set {_package = newValue}
   }
   /// Returns true if `package` has been explicitly set.
-  var hasPackage: Bool {return self._package != nil}
+  public var hasPackage: Bool {return self._package != nil}
   /// Clears the value of `package`. Subsequent reads from it will return its default value.
-  mutating func clearPackage() {self._package = nil}
+  public mutating func clearPackage() {self._package = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _package: Aiocean_Polvo_V1_Package? = nil
 }
 
-struct Aiocean_Polvo_V1_ListVersionsRequest {
+public struct Aiocean_Polvo_V1_ListVersionsRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var orn: String = String()
+  public var orn: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Aiocean_Polvo_V1_ListVersionsResponse {
+public struct Aiocean_Polvo_V1_ListVersionsResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var versions: [Aiocean_Polvo_V1_Version] = []
+  public var versions: [Aiocean_Polvo_V1_Version] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Aiocean_Polvo_V1_GetVersionRequest {
+public struct Aiocean_Polvo_V1_GetVersionRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var orn: String = String()
+  public var orn: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Aiocean_Polvo_V1_GetVersionResponse {
+public struct Aiocean_Polvo_V1_GetVersionResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var version: Aiocean_Polvo_V1_Version {
+  public var version: Aiocean_Polvo_V1_Version {
     get {return _version ?? Aiocean_Polvo_V1_Version()}
     set {_version = newValue}
   }
   /// Returns true if `version` has been explicitly set.
-  var hasVersion: Bool {return self._version != nil}
+  public var hasVersion: Bool {return self._version != nil}
   /// Clears the value of `version`. Subsequent reads from it will return its default value.
-  mutating func clearVersion() {self._version = nil}
+  public mutating func clearVersion() {self._version = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _version: Aiocean_Polvo_V1_Version? = nil
 }
 
-struct Aiocean_Polvo_V1_CreateVersionRequest {
+public struct Aiocean_Polvo_V1_CreateVersionRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var packageOrn: String = String()
+  public var packageOrn: String = String()
 
-  var version: Aiocean_Polvo_V1_Version {
+  public var version: Aiocean_Polvo_V1_Version {
     get {return _version ?? Aiocean_Polvo_V1_Version()}
     set {_version = newValue}
   }
   /// Returns true if `version` has been explicitly set.
-  var hasVersion: Bool {return self._version != nil}
+  public var hasVersion: Bool {return self._version != nil}
   /// Clears the value of `version`. Subsequent reads from it will return its default value.
-  mutating func clearVersion() {self._version = nil}
+  public mutating func clearVersion() {self._version = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _version: Aiocean_Polvo_V1_Version? = nil
 }
 
-struct Aiocean_Polvo_V1_CreateVersionResponse {
+public struct Aiocean_Polvo_V1_CreateVersionResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var version: Aiocean_Polvo_V1_Version {
+  public var version: Aiocean_Polvo_V1_Version {
     get {return _version ?? Aiocean_Polvo_V1_Version()}
     set {_version = newValue}
   }
   /// Returns true if `version` has been explicitly set.
-  var hasVersion: Bool {return self._version != nil}
+  public var hasVersion: Bool {return self._version != nil}
   /// Clears the value of `version`. Subsequent reads from it will return its default value.
-  mutating func clearVersion() {self._version = nil}
+  public mutating func clearVersion() {self._version = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _version: Aiocean_Polvo_V1_Version? = nil
 }
 
-struct Aiocean_Polvo_V1_UpdatePackageRequest {
+public struct Aiocean_Polvo_V1_UpdatePackageRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var package: Aiocean_Polvo_V1_Package {
+  public var package: Aiocean_Polvo_V1_Package {
     get {return _package ?? Aiocean_Polvo_V1_Package()}
     set {_package = newValue}
   }
   /// Returns true if `package` has been explicitly set.
-  var hasPackage: Bool {return self._package != nil}
+  public var hasPackage: Bool {return self._package != nil}
   /// Clears the value of `package`. Subsequent reads from it will return its default value.
-  mutating func clearPackage() {self._package = nil}
+  public mutating func clearPackage() {self._package = nil}
 
-  var fieldMask: SwiftProtobuf.Google_Protobuf_FieldMask {
+  public var fieldMask: SwiftProtobuf.Google_Protobuf_FieldMask {
     get {return _fieldMask ?? SwiftProtobuf.Google_Protobuf_FieldMask()}
     set {_fieldMask = newValue}
   }
   /// Returns true if `fieldMask` has been explicitly set.
-  var hasFieldMask: Bool {return self._fieldMask != nil}
+  public var hasFieldMask: Bool {return self._fieldMask != nil}
   /// Clears the value of `fieldMask`. Subsequent reads from it will return its default value.
-  mutating func clearFieldMask() {self._fieldMask = nil}
+  public mutating func clearFieldMask() {self._fieldMask = nil}
 
-  var orn: String = String()
+  public var orn: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _package: Aiocean_Polvo_V1_Package? = nil
   fileprivate var _fieldMask: SwiftProtobuf.Google_Protobuf_FieldMask? = nil
 }
 
-struct Aiocean_Polvo_V1_UpdatePackageResponse {
+public struct Aiocean_Polvo_V1_UpdatePackageResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var package: Aiocean_Polvo_V1_Package {
+  public var package: Aiocean_Polvo_V1_Package {
     get {return _package ?? Aiocean_Polvo_V1_Package()}
     set {_package = newValue}
   }
   /// Returns true if `package` has been explicitly set.
-  var hasPackage: Bool {return self._package != nil}
+  public var hasPackage: Bool {return self._package != nil}
   /// Clears the value of `package`. Subsequent reads from it will return its default value.
-  mutating func clearPackage() {self._package = nil}
+  public mutating func clearPackage() {self._package = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _package: Aiocean_Polvo_V1_Package? = nil
 }
 
-struct Aiocean_Polvo_V1_UpdateVersionRequest {
+public struct Aiocean_Polvo_V1_UpdateVersionRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var orn: String = String()
+  public var orn: String = String()
 
-  var version: Aiocean_Polvo_V1_Version {
+  public var version: Aiocean_Polvo_V1_Version {
     get {return _version ?? Aiocean_Polvo_V1_Version()}
     set {_version = newValue}
   }
   /// Returns true if `version` has been explicitly set.
-  var hasVersion: Bool {return self._version != nil}
+  public var hasVersion: Bool {return self._version != nil}
   /// Clears the value of `version`. Subsequent reads from it will return its default value.
-  mutating func clearVersion() {self._version = nil}
+  public mutating func clearVersion() {self._version = nil}
 
-  var fieldMask: SwiftProtobuf.Google_Protobuf_FieldMask {
+  public var fieldMask: SwiftProtobuf.Google_Protobuf_FieldMask {
     get {return _fieldMask ?? SwiftProtobuf.Google_Protobuf_FieldMask()}
     set {_fieldMask = newValue}
   }
   /// Returns true if `fieldMask` has been explicitly set.
-  var hasFieldMask: Bool {return self._fieldMask != nil}
+  public var hasFieldMask: Bool {return self._fieldMask != nil}
   /// Clears the value of `fieldMask`. Subsequent reads from it will return its default value.
-  mutating func clearFieldMask() {self._fieldMask = nil}
+  public mutating func clearFieldMask() {self._fieldMask = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _version: Aiocean_Polvo_V1_Version? = nil
   fileprivate var _fieldMask: SwiftProtobuf.Google_Protobuf_FieldMask? = nil
 }
 
-struct Aiocean_Polvo_V1_DeleteVersionRequest {
+public struct Aiocean_Polvo_V1_DeleteVersionRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var orn: String = String()
+  public var orn: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Aiocean_Polvo_V1_DeleteVersionResponse {
+public struct Aiocean_Polvo_V1_DeleteVersionResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var message: String = String()
+  public var message: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Aiocean_Polvo_V1_UpdateVersionResponse {
+public struct Aiocean_Polvo_V1_UpdateVersionResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var version: Aiocean_Polvo_V1_Version {
+  public var version: Aiocean_Polvo_V1_Version {
     get {return _version ?? Aiocean_Polvo_V1_Version()}
     set {_version = newValue}
   }
   /// Returns true if `version` has been explicitly set.
-  var hasVersion: Bool {return self._version != nil}
+  public var hasVersion: Bool {return self._version != nil}
   /// Clears the value of `version`. Subsequent reads from it will return its default value.
-  mutating func clearVersion() {self._version = nil}
+  public mutating func clearVersion() {self._version = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _version: Aiocean_Polvo_V1_Version? = nil
 }
@@ -403,12 +403,12 @@ struct Aiocean_Polvo_V1_UpdateVersionResponse {
 fileprivate let _protobuf_package = "aiocean.polvo.v1"
 
 extension Aiocean_Polvo_V1_GetManifestUrlRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".GetManifestUrlRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".GetManifestUrlRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "orn"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -420,14 +420,14 @@ extension Aiocean_Polvo_V1_GetManifestUrlRequest: SwiftProtobuf.Message, SwiftPr
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.orn.isEmpty {
       try visitor.visitSingularStringField(value: self.orn, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Aiocean_Polvo_V1_GetManifestUrlRequest, rhs: Aiocean_Polvo_V1_GetManifestUrlRequest) -> Bool {
+  public static func ==(lhs: Aiocean_Polvo_V1_GetManifestUrlRequest, rhs: Aiocean_Polvo_V1_GetManifestUrlRequest) -> Bool {
     if lhs.orn != rhs.orn {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -435,12 +435,12 @@ extension Aiocean_Polvo_V1_GetManifestUrlRequest: SwiftProtobuf.Message, SwiftPr
 }
 
 extension Aiocean_Polvo_V1_GetManifestUrlResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".GetManifestUrlResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".GetManifestUrlResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "manifest_url"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -452,14 +452,14 @@ extension Aiocean_Polvo_V1_GetManifestUrlResponse: SwiftProtobuf.Message, SwiftP
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.manifestURL.isEmpty {
       try visitor.visitSingularStringField(value: self.manifestURL, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Aiocean_Polvo_V1_GetManifestUrlResponse, rhs: Aiocean_Polvo_V1_GetManifestUrlResponse) -> Bool {
+  public static func ==(lhs: Aiocean_Polvo_V1_GetManifestUrlResponse, rhs: Aiocean_Polvo_V1_GetManifestUrlResponse) -> Bool {
     if lhs.manifestURL != rhs.manifestURL {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -467,12 +467,12 @@ extension Aiocean_Polvo_V1_GetManifestUrlResponse: SwiftProtobuf.Message, SwiftP
 }
 
 extension Aiocean_Polvo_V1_DeletePackageRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".DeletePackageRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".DeletePackageRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "orn"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -484,14 +484,14 @@ extension Aiocean_Polvo_V1_DeletePackageRequest: SwiftProtobuf.Message, SwiftPro
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.orn.isEmpty {
       try visitor.visitSingularStringField(value: self.orn, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Aiocean_Polvo_V1_DeletePackageRequest, rhs: Aiocean_Polvo_V1_DeletePackageRequest) -> Bool {
+  public static func ==(lhs: Aiocean_Polvo_V1_DeletePackageRequest, rhs: Aiocean_Polvo_V1_DeletePackageRequest) -> Bool {
     if lhs.orn != rhs.orn {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -499,12 +499,12 @@ extension Aiocean_Polvo_V1_DeletePackageRequest: SwiftProtobuf.Message, SwiftPro
 }
 
 extension Aiocean_Polvo_V1_DeletePackageResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".DeletePackageResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".DeletePackageResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "message"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -516,14 +516,14 @@ extension Aiocean_Polvo_V1_DeletePackageResponse: SwiftProtobuf.Message, SwiftPr
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.message.isEmpty {
       try visitor.visitSingularStringField(value: self.message, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Aiocean_Polvo_V1_DeletePackageResponse, rhs: Aiocean_Polvo_V1_DeletePackageResponse) -> Bool {
+  public static func ==(lhs: Aiocean_Polvo_V1_DeletePackageResponse, rhs: Aiocean_Polvo_V1_DeletePackageResponse) -> Bool {
     if lhs.message != rhs.message {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -531,31 +531,31 @@ extension Aiocean_Polvo_V1_DeletePackageResponse: SwiftProtobuf.Message, SwiftPr
 }
 
 extension Aiocean_Polvo_V1_ListPackagesRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ListPackagesRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".ListPackagesRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let _ = try decoder.nextFieldNumber() {
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Aiocean_Polvo_V1_ListPackagesRequest, rhs: Aiocean_Polvo_V1_ListPackagesRequest) -> Bool {
+  public static func ==(lhs: Aiocean_Polvo_V1_ListPackagesRequest, rhs: Aiocean_Polvo_V1_ListPackagesRequest) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension Aiocean_Polvo_V1_ListPackagesResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ListPackagesResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ListPackagesResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "packages"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -567,14 +567,14 @@ extension Aiocean_Polvo_V1_ListPackagesResponse: SwiftProtobuf.Message, SwiftPro
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.packages.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.packages, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Aiocean_Polvo_V1_ListPackagesResponse, rhs: Aiocean_Polvo_V1_ListPackagesResponse) -> Bool {
+  public static func ==(lhs: Aiocean_Polvo_V1_ListPackagesResponse, rhs: Aiocean_Polvo_V1_ListPackagesResponse) -> Bool {
     if lhs.packages != rhs.packages {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -582,12 +582,12 @@ extension Aiocean_Polvo_V1_ListPackagesResponse: SwiftProtobuf.Message, SwiftPro
 }
 
 extension Aiocean_Polvo_V1_GetPackageRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".GetPackageRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".GetPackageRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "orn"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -599,14 +599,14 @@ extension Aiocean_Polvo_V1_GetPackageRequest: SwiftProtobuf.Message, SwiftProtob
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.orn.isEmpty {
       try visitor.visitSingularStringField(value: self.orn, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Aiocean_Polvo_V1_GetPackageRequest, rhs: Aiocean_Polvo_V1_GetPackageRequest) -> Bool {
+  public static func ==(lhs: Aiocean_Polvo_V1_GetPackageRequest, rhs: Aiocean_Polvo_V1_GetPackageRequest) -> Bool {
     if lhs.orn != rhs.orn {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -614,12 +614,12 @@ extension Aiocean_Polvo_V1_GetPackageRequest: SwiftProtobuf.Message, SwiftProtob
 }
 
 extension Aiocean_Polvo_V1_GetPackageResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".GetPackageResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".GetPackageResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "package"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -631,14 +631,14 @@ extension Aiocean_Polvo_V1_GetPackageResponse: SwiftProtobuf.Message, SwiftProto
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._package {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Aiocean_Polvo_V1_GetPackageResponse, rhs: Aiocean_Polvo_V1_GetPackageResponse) -> Bool {
+  public static func ==(lhs: Aiocean_Polvo_V1_GetPackageResponse, rhs: Aiocean_Polvo_V1_GetPackageResponse) -> Bool {
     if lhs._package != rhs._package {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -646,12 +646,12 @@ extension Aiocean_Polvo_V1_GetPackageResponse: SwiftProtobuf.Message, SwiftProto
 }
 
 extension Aiocean_Polvo_V1_CreatePackageRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".CreatePackageRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".CreatePackageRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     2: .same(proto: "package"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -663,14 +663,14 @@ extension Aiocean_Polvo_V1_CreatePackageRequest: SwiftProtobuf.Message, SwiftPro
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._package {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Aiocean_Polvo_V1_CreatePackageRequest, rhs: Aiocean_Polvo_V1_CreatePackageRequest) -> Bool {
+  public static func ==(lhs: Aiocean_Polvo_V1_CreatePackageRequest, rhs: Aiocean_Polvo_V1_CreatePackageRequest) -> Bool {
     if lhs._package != rhs._package {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -678,12 +678,12 @@ extension Aiocean_Polvo_V1_CreatePackageRequest: SwiftProtobuf.Message, SwiftPro
 }
 
 extension Aiocean_Polvo_V1_CreatePackageResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".CreatePackageResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".CreatePackageResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "package"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -695,14 +695,14 @@ extension Aiocean_Polvo_V1_CreatePackageResponse: SwiftProtobuf.Message, SwiftPr
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._package {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Aiocean_Polvo_V1_CreatePackageResponse, rhs: Aiocean_Polvo_V1_CreatePackageResponse) -> Bool {
+  public static func ==(lhs: Aiocean_Polvo_V1_CreatePackageResponse, rhs: Aiocean_Polvo_V1_CreatePackageResponse) -> Bool {
     if lhs._package != rhs._package {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -710,12 +710,12 @@ extension Aiocean_Polvo_V1_CreatePackageResponse: SwiftProtobuf.Message, SwiftPr
 }
 
 extension Aiocean_Polvo_V1_ListVersionsRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ListVersionsRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ListVersionsRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "orn"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -727,14 +727,14 @@ extension Aiocean_Polvo_V1_ListVersionsRequest: SwiftProtobuf.Message, SwiftProt
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.orn.isEmpty {
       try visitor.visitSingularStringField(value: self.orn, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Aiocean_Polvo_V1_ListVersionsRequest, rhs: Aiocean_Polvo_V1_ListVersionsRequest) -> Bool {
+  public static func ==(lhs: Aiocean_Polvo_V1_ListVersionsRequest, rhs: Aiocean_Polvo_V1_ListVersionsRequest) -> Bool {
     if lhs.orn != rhs.orn {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -742,12 +742,12 @@ extension Aiocean_Polvo_V1_ListVersionsRequest: SwiftProtobuf.Message, SwiftProt
 }
 
 extension Aiocean_Polvo_V1_ListVersionsResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ListVersionsResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ListVersionsResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "versions"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -759,14 +759,14 @@ extension Aiocean_Polvo_V1_ListVersionsResponse: SwiftProtobuf.Message, SwiftPro
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.versions.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.versions, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Aiocean_Polvo_V1_ListVersionsResponse, rhs: Aiocean_Polvo_V1_ListVersionsResponse) -> Bool {
+  public static func ==(lhs: Aiocean_Polvo_V1_ListVersionsResponse, rhs: Aiocean_Polvo_V1_ListVersionsResponse) -> Bool {
     if lhs.versions != rhs.versions {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -774,12 +774,12 @@ extension Aiocean_Polvo_V1_ListVersionsResponse: SwiftProtobuf.Message, SwiftPro
 }
 
 extension Aiocean_Polvo_V1_GetVersionRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".GetVersionRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".GetVersionRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "orn"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -791,14 +791,14 @@ extension Aiocean_Polvo_V1_GetVersionRequest: SwiftProtobuf.Message, SwiftProtob
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.orn.isEmpty {
       try visitor.visitSingularStringField(value: self.orn, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Aiocean_Polvo_V1_GetVersionRequest, rhs: Aiocean_Polvo_V1_GetVersionRequest) -> Bool {
+  public static func ==(lhs: Aiocean_Polvo_V1_GetVersionRequest, rhs: Aiocean_Polvo_V1_GetVersionRequest) -> Bool {
     if lhs.orn != rhs.orn {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -806,12 +806,12 @@ extension Aiocean_Polvo_V1_GetVersionRequest: SwiftProtobuf.Message, SwiftProtob
 }
 
 extension Aiocean_Polvo_V1_GetVersionResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".GetVersionResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".GetVersionResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "version"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -823,14 +823,14 @@ extension Aiocean_Polvo_V1_GetVersionResponse: SwiftProtobuf.Message, SwiftProto
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._version {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Aiocean_Polvo_V1_GetVersionResponse, rhs: Aiocean_Polvo_V1_GetVersionResponse) -> Bool {
+  public static func ==(lhs: Aiocean_Polvo_V1_GetVersionResponse, rhs: Aiocean_Polvo_V1_GetVersionResponse) -> Bool {
     if lhs._version != rhs._version {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -838,13 +838,13 @@ extension Aiocean_Polvo_V1_GetVersionResponse: SwiftProtobuf.Message, SwiftProto
 }
 
 extension Aiocean_Polvo_V1_CreateVersionRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".CreateVersionRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".CreateVersionRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "package_orn"),
     2: .same(proto: "version"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -857,7 +857,7 @@ extension Aiocean_Polvo_V1_CreateVersionRequest: SwiftProtobuf.Message, SwiftPro
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.packageOrn.isEmpty {
       try visitor.visitSingularStringField(value: self.packageOrn, fieldNumber: 1)
     }
@@ -867,7 +867,7 @@ extension Aiocean_Polvo_V1_CreateVersionRequest: SwiftProtobuf.Message, SwiftPro
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Aiocean_Polvo_V1_CreateVersionRequest, rhs: Aiocean_Polvo_V1_CreateVersionRequest) -> Bool {
+  public static func ==(lhs: Aiocean_Polvo_V1_CreateVersionRequest, rhs: Aiocean_Polvo_V1_CreateVersionRequest) -> Bool {
     if lhs.packageOrn != rhs.packageOrn {return false}
     if lhs._version != rhs._version {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -876,12 +876,12 @@ extension Aiocean_Polvo_V1_CreateVersionRequest: SwiftProtobuf.Message, SwiftPro
 }
 
 extension Aiocean_Polvo_V1_CreateVersionResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".CreateVersionResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".CreateVersionResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "version"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -893,14 +893,14 @@ extension Aiocean_Polvo_V1_CreateVersionResponse: SwiftProtobuf.Message, SwiftPr
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._version {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Aiocean_Polvo_V1_CreateVersionResponse, rhs: Aiocean_Polvo_V1_CreateVersionResponse) -> Bool {
+  public static func ==(lhs: Aiocean_Polvo_V1_CreateVersionResponse, rhs: Aiocean_Polvo_V1_CreateVersionResponse) -> Bool {
     if lhs._version != rhs._version {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -908,14 +908,14 @@ extension Aiocean_Polvo_V1_CreateVersionResponse: SwiftProtobuf.Message, SwiftPr
 }
 
 extension Aiocean_Polvo_V1_UpdatePackageRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".UpdatePackageRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".UpdatePackageRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "package"),
     2: .standard(proto: "field_mask"),
     3: .same(proto: "orn"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -929,7 +929,7 @@ extension Aiocean_Polvo_V1_UpdatePackageRequest: SwiftProtobuf.Message, SwiftPro
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._package {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
     }
@@ -942,7 +942,7 @@ extension Aiocean_Polvo_V1_UpdatePackageRequest: SwiftProtobuf.Message, SwiftPro
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Aiocean_Polvo_V1_UpdatePackageRequest, rhs: Aiocean_Polvo_V1_UpdatePackageRequest) -> Bool {
+  public static func ==(lhs: Aiocean_Polvo_V1_UpdatePackageRequest, rhs: Aiocean_Polvo_V1_UpdatePackageRequest) -> Bool {
     if lhs._package != rhs._package {return false}
     if lhs._fieldMask != rhs._fieldMask {return false}
     if lhs.orn != rhs.orn {return false}
@@ -952,12 +952,12 @@ extension Aiocean_Polvo_V1_UpdatePackageRequest: SwiftProtobuf.Message, SwiftPro
 }
 
 extension Aiocean_Polvo_V1_UpdatePackageResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".UpdatePackageResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".UpdatePackageResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "package"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -969,14 +969,14 @@ extension Aiocean_Polvo_V1_UpdatePackageResponse: SwiftProtobuf.Message, SwiftPr
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._package {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Aiocean_Polvo_V1_UpdatePackageResponse, rhs: Aiocean_Polvo_V1_UpdatePackageResponse) -> Bool {
+  public static func ==(lhs: Aiocean_Polvo_V1_UpdatePackageResponse, rhs: Aiocean_Polvo_V1_UpdatePackageResponse) -> Bool {
     if lhs._package != rhs._package {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -984,14 +984,14 @@ extension Aiocean_Polvo_V1_UpdatePackageResponse: SwiftProtobuf.Message, SwiftPr
 }
 
 extension Aiocean_Polvo_V1_UpdateVersionRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".UpdateVersionRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".UpdateVersionRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "orn"),
     2: .same(proto: "version"),
     3: .standard(proto: "field_mask"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1005,7 +1005,7 @@ extension Aiocean_Polvo_V1_UpdateVersionRequest: SwiftProtobuf.Message, SwiftPro
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.orn.isEmpty {
       try visitor.visitSingularStringField(value: self.orn, fieldNumber: 1)
     }
@@ -1018,7 +1018,7 @@ extension Aiocean_Polvo_V1_UpdateVersionRequest: SwiftProtobuf.Message, SwiftPro
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Aiocean_Polvo_V1_UpdateVersionRequest, rhs: Aiocean_Polvo_V1_UpdateVersionRequest) -> Bool {
+  public static func ==(lhs: Aiocean_Polvo_V1_UpdateVersionRequest, rhs: Aiocean_Polvo_V1_UpdateVersionRequest) -> Bool {
     if lhs.orn != rhs.orn {return false}
     if lhs._version != rhs._version {return false}
     if lhs._fieldMask != rhs._fieldMask {return false}
@@ -1028,12 +1028,12 @@ extension Aiocean_Polvo_V1_UpdateVersionRequest: SwiftProtobuf.Message, SwiftPro
 }
 
 extension Aiocean_Polvo_V1_DeleteVersionRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".DeleteVersionRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".DeleteVersionRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "orn"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1045,14 +1045,14 @@ extension Aiocean_Polvo_V1_DeleteVersionRequest: SwiftProtobuf.Message, SwiftPro
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.orn.isEmpty {
       try visitor.visitSingularStringField(value: self.orn, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Aiocean_Polvo_V1_DeleteVersionRequest, rhs: Aiocean_Polvo_V1_DeleteVersionRequest) -> Bool {
+  public static func ==(lhs: Aiocean_Polvo_V1_DeleteVersionRequest, rhs: Aiocean_Polvo_V1_DeleteVersionRequest) -> Bool {
     if lhs.orn != rhs.orn {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -1060,12 +1060,12 @@ extension Aiocean_Polvo_V1_DeleteVersionRequest: SwiftProtobuf.Message, SwiftPro
 }
 
 extension Aiocean_Polvo_V1_DeleteVersionResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".DeleteVersionResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".DeleteVersionResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "message"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1077,14 +1077,14 @@ extension Aiocean_Polvo_V1_DeleteVersionResponse: SwiftProtobuf.Message, SwiftPr
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.message.isEmpty {
       try visitor.visitSingularStringField(value: self.message, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Aiocean_Polvo_V1_DeleteVersionResponse, rhs: Aiocean_Polvo_V1_DeleteVersionResponse) -> Bool {
+  public static func ==(lhs: Aiocean_Polvo_V1_DeleteVersionResponse, rhs: Aiocean_Polvo_V1_DeleteVersionResponse) -> Bool {
     if lhs.message != rhs.message {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -1092,12 +1092,12 @@ extension Aiocean_Polvo_V1_DeleteVersionResponse: SwiftProtobuf.Message, SwiftPr
 }
 
 extension Aiocean_Polvo_V1_UpdateVersionResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".UpdateVersionResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".UpdateVersionResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "version"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1109,14 +1109,14 @@ extension Aiocean_Polvo_V1_UpdateVersionResponse: SwiftProtobuf.Message, SwiftPr
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._version {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Aiocean_Polvo_V1_UpdateVersionResponse, rhs: Aiocean_Polvo_V1_UpdateVersionResponse) -> Bool {
+  public static func ==(lhs: Aiocean_Polvo_V1_UpdateVersionResponse, rhs: Aiocean_Polvo_V1_UpdateVersionResponse) -> Bool {
     if lhs._version != rhs._version {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true

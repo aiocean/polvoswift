@@ -41,8 +41,8 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 /// the most specific error code that applies.  For example, prefer
 /// `OUT_OF_RANGE` over `FAILED_PRECONDITION` if both codes apply.
 /// Similarly prefer `NOT_FOUND` or `ALREADY_EXISTS` over `FAILED_PRECONDITION`.
-enum Google_Rpc_Code: SwiftProtobuf.Enum {
-  typealias RawValue = Int
+public enum Google_Rpc_Code: SwiftProtobuf.Enum {
+  public typealias RawValue = Int
 
   /// Not an error; returned on success
   ///
@@ -199,11 +199,11 @@ enum Google_Rpc_Code: SwiftProtobuf.Enum {
   case dataLoss // = 15
   case UNRECOGNIZED(Int)
 
-  init() {
+  public init() {
     self = .ok
   }
 
-  init?(rawValue: Int) {
+  public init?(rawValue: Int) {
     switch rawValue {
     case 0: self = .ok
     case 1: self = .cancelled
@@ -226,7 +226,7 @@ enum Google_Rpc_Code: SwiftProtobuf.Enum {
     }
   }
 
-  var rawValue: Int {
+  public var rawValue: Int {
     switch self {
     case .ok: return 0
     case .cancelled: return 1
@@ -255,7 +255,7 @@ enum Google_Rpc_Code: SwiftProtobuf.Enum {
 
 extension Google_Rpc_Code: CaseIterable {
   // The compiler won't synthesize support with the UNRECOGNIZED case.
-  static var allCases: [Google_Rpc_Code] = [
+  public static var allCases: [Google_Rpc_Code] = [
     .ok,
     .cancelled,
     .unknown,
@@ -281,7 +281,7 @@ extension Google_Rpc_Code: CaseIterable {
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
 extension Google_Rpc_Code: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "OK"),
     1: .same(proto: "CANCELLED"),
     2: .same(proto: "UNKNOWN"),

@@ -47,43 +47,43 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 /// the delay between retries based on `retry_delay`, until either a maximum
 /// number of retries have been reached or a maximum retry delay cap has been
 /// reached.
-struct Google_Rpc_RetryInfo {
+public struct Google_Rpc_RetryInfo {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// Clients should wait at least this long between retrying the same request.
-  var retryDelay: SwiftProtobuf.Google_Protobuf_Duration {
+  public var retryDelay: SwiftProtobuf.Google_Protobuf_Duration {
     get {return _retryDelay ?? SwiftProtobuf.Google_Protobuf_Duration()}
     set {_retryDelay = newValue}
   }
   /// Returns true if `retryDelay` has been explicitly set.
-  var hasRetryDelay: Bool {return self._retryDelay != nil}
+  public var hasRetryDelay: Bool {return self._retryDelay != nil}
   /// Clears the value of `retryDelay`. Subsequent reads from it will return its default value.
-  mutating func clearRetryDelay() {self._retryDelay = nil}
+  public mutating func clearRetryDelay() {self._retryDelay = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _retryDelay: SwiftProtobuf.Google_Protobuf_Duration? = nil
 }
 
 /// Describes additional debugging info.
-struct Google_Rpc_DebugInfo {
+public struct Google_Rpc_DebugInfo {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// The stack trace entries indicating where the error occurred.
-  var stackEntries: [String] = []
+  public var stackEntries: [String] = []
 
   /// Additional debugging information provided by the server.
-  var detail: String = String()
+  public var detail: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// Describes how a quota check failed.
@@ -97,19 +97,19 @@ struct Google_Rpc_DebugInfo {
 ///
 /// Also see RetryInfo and Help types for other details about handling a
 /// quota failure.
-struct Google_Rpc_QuotaFailure {
+public struct Google_Rpc_QuotaFailure {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// Describes all quota violations.
-  var violations: [Google_Rpc_QuotaFailure.Violation] = []
+  public var violations: [Google_Rpc_QuotaFailure.Violation] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   /// A message type used to describe a single quota violation.  For example, a
   /// daily quota or a custom quota that was exceeded.
-  struct Violation {
+  public struct Violation {
     // SwiftProtobuf.Message conformance is added in an extension below. See the
     // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
     // methods supported on all messages.
@@ -117,7 +117,7 @@ struct Google_Rpc_QuotaFailure {
     /// The subject on which the quota check failed.
     /// For example, "clientip:<ip address of client>" or "project:<Google
     /// developer project id>".
-    var subject: String = String()
+    public var subject: String = String()
 
     /// A description of how the quota check failed. Clients can use this
     /// description to find more about the quota configuration in the service's
@@ -126,14 +126,14 @@ struct Google_Rpc_QuotaFailure {
     ///
     /// For example: "Service disabled" or "Daily Limit for read operations
     /// exceeded".
-    var description_p: String = String()
+    public var description_p: String = String()
 
-    var unknownFields = SwiftProtobuf.UnknownStorage()
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-    init() {}
+    public init() {}
   }
 
-  init() {}
+  public init() {}
 }
 
 /// Describes the cause of the error with structured details.
@@ -160,7 +160,7 @@ struct Google_Rpc_QuotaFailure {
 ///         "availableRegions": "us-central1,us-east2"
 ///       }
 ///     }
-struct Google_Rpc_ErrorInfo {
+public struct Google_Rpc_ErrorInfo {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -169,7 +169,7 @@ struct Google_Rpc_ErrorInfo {
   /// proximate cause of the error. Error reasons are unique within a particular
   /// domain of errors. This should be at most 63 characters and match
   /// /[A-Z0-9_]+/.
-  var reason: String = String()
+  public var reason: String = String()
 
   /// The logical grouping to which the "reason" belongs. The error domain
   /// is typically the registered service name of the tool or product that
@@ -177,7 +177,7 @@ struct Google_Rpc_ErrorInfo {
   /// generated by some common infrastructure, the error domain must be a
   /// globally unique value that identifies the infrastructure. For Google API
   /// infrastructure, the error domain is "googleapis.com".
-  var domain: String = String()
+  public var domain: String = String()
 
   /// Additional structured details about this error.
   ///
@@ -187,11 +187,11 @@ struct Google_Rpc_ErrorInfo {
   /// {"instanceLimit": "100/request"}, should be returned as,
   /// {"instanceLimitPerRequest": "100"}, if the client exceeds the number of
   /// instances that can be created in a single (batch) request.
-  var metadata: Dictionary<String,String> = [:]
+  public var metadata: Dictionary<String,String> = [:]
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// Describes what preconditions have failed.
@@ -199,18 +199,18 @@ struct Google_Rpc_ErrorInfo {
 /// For example, if an RPC failed because it required the Terms of Service to be
 /// acknowledged, it could list the terms of service violation in the
 /// PreconditionFailure message.
-struct Google_Rpc_PreconditionFailure {
+public struct Google_Rpc_PreconditionFailure {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// Describes all precondition violations.
-  var violations: [Google_Rpc_PreconditionFailure.Violation] = []
+  public var violations: [Google_Rpc_PreconditionFailure.Violation] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   /// A message type used to describe a single precondition failure.
-  struct Violation {
+  public struct Violation {
     // SwiftProtobuf.Message conformance is added in an extension below. See the
     // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
     // methods supported on all messages.
@@ -218,41 +218,41 @@ struct Google_Rpc_PreconditionFailure {
     /// The type of PreconditionFailure. We recommend using a service-specific
     /// enum type to define the supported precondition violation subjects. For
     /// example, "TOS" for "Terms of Service violation".
-    var type: String = String()
+    public var type: String = String()
 
     /// The subject, relative to the type, that failed.
     /// For example, "google.com/cloud" relative to the "TOS" type would indicate
     /// which terms of service is being referenced.
-    var subject: String = String()
+    public var subject: String = String()
 
     /// A description of how the precondition failed. Developers can use this
     /// description to understand how to fix the failure.
     ///
     /// For example: "Terms of service not accepted".
-    var description_p: String = String()
+    public var description_p: String = String()
 
-    var unknownFields = SwiftProtobuf.UnknownStorage()
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-    init() {}
+    public init() {}
   }
 
-  init() {}
+  public init() {}
 }
 
 /// Describes violations in a client request. This error type focuses on the
 /// syntactic aspects of the request.
-struct Google_Rpc_BadRequest {
+public struct Google_Rpc_BadRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// Describes all violations in a client request.
-  var fieldViolations: [Google_Rpc_BadRequest.FieldViolation] = []
+  public var fieldViolations: [Google_Rpc_BadRequest.FieldViolation] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   /// A message type used to describe a single bad request field.
-  struct FieldViolation {
+  public struct FieldViolation {
     // SwiftProtobuf.Message conformance is added in an extension below. See the
     // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
     // methods supported on all messages.
@@ -260,41 +260,41 @@ struct Google_Rpc_BadRequest {
     /// A path leading to a field in the request body. The value will be a
     /// sequence of dot-separated identifiers that identify a protocol buffer
     /// field. E.g., "field_violations.field" would identify this field.
-    var field: String = String()
+    public var field: String = String()
 
     /// A description of why the request element is bad.
-    var description_p: String = String()
+    public var description_p: String = String()
 
-    var unknownFields = SwiftProtobuf.UnknownStorage()
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-    init() {}
+    public init() {}
   }
 
-  init() {}
+  public init() {}
 }
 
 /// Contains metadata about the request that clients can attach when filing a bug
 /// or providing other forms of feedback.
-struct Google_Rpc_RequestInfo {
+public struct Google_Rpc_RequestInfo {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// An opaque string that should only be interpreted by the service generating
   /// it. For example, it can be used to identify requests in the service's logs.
-  var requestID: String = String()
+  public var requestID: String = String()
 
   /// Any data that was used to serve this request. For example, an encrypted
   /// stack trace that can be sent back to the service provider for debugging.
-  var servingData: String = String()
+  public var servingData: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// Describes the resource that is being accessed.
-struct Google_Rpc_ResourceInfo {
+public struct Google_Rpc_ResourceInfo {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -302,26 +302,26 @@ struct Google_Rpc_ResourceInfo {
   /// A name for the type of resource being accessed, e.g. "sql table",
   /// "cloud storage bucket", "file", "Google calendar"; or the type URL
   /// of the resource: e.g. "type.googleapis.com/google.pubsub.v1.Topic".
-  var resourceType: String = String()
+  public var resourceType: String = String()
 
   /// The name of the resource being accessed.  For example, a shared calendar
   /// name: "example.com_4fghdhgsrgh@group.calendar.google.com", if the current
   /// error is [google.rpc.Code.PERMISSION_DENIED][google.rpc.Code.PERMISSION_DENIED].
-  var resourceName: String = String()
+  public var resourceName: String = String()
 
   /// The owner of the resource (optional).
   /// For example, "user:<owner email>" or "project:<Google developer project
   /// id>".
-  var owner: String = String()
+  public var owner: String = String()
 
   /// Describes what error is encountered when accessing this resource.
   /// For example, updating a cloud project may require the `writer` permission
   /// on the developer console project.
-  var description_p: String = String()
+  public var description_p: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// Provides links to documentation or for performing an out of band action.
@@ -329,39 +329,39 @@ struct Google_Rpc_ResourceInfo {
 /// For example, if a quota check failed with an error indicating the calling
 /// project hasn't enabled the accessed service, this can contain a URL pointing
 /// directly to the right place in the developer console to flip the bit.
-struct Google_Rpc_Help {
+public struct Google_Rpc_Help {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// URL(s) pointing to additional information on handling the current error.
-  var links: [Google_Rpc_Help.Link] = []
+  public var links: [Google_Rpc_Help.Link] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   /// Describes a URL link.
-  struct Link {
+  public struct Link {
     // SwiftProtobuf.Message conformance is added in an extension below. See the
     // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
     // methods supported on all messages.
 
     /// Describes what the link offers.
-    var description_p: String = String()
+    public var description_p: String = String()
 
     /// The URL of the link.
-    var url: String = String()
+    public var url: String = String()
 
-    var unknownFields = SwiftProtobuf.UnknownStorage()
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-    init() {}
+    public init() {}
   }
 
-  init() {}
+  public init() {}
 }
 
 /// Provides a localized error message that is safe to return to the user
 /// which can be attached to an RPC error.
-struct Google_Rpc_LocalizedMessage {
+public struct Google_Rpc_LocalizedMessage {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -369,14 +369,14 @@ struct Google_Rpc_LocalizedMessage {
   /// The locale used following the specification defined at
   /// http://www.rfc-editor.org/rfc/bcp/bcp47.txt.
   /// Examples are: "en-US", "fr-CH", "es-MX"
-  var locale: String = String()
+  public var locale: String = String()
 
   /// The localized error message in the above locale.
-  var message: String = String()
+  public var message: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -384,12 +384,12 @@ struct Google_Rpc_LocalizedMessage {
 fileprivate let _protobuf_package = "google.rpc"
 
 extension Google_Rpc_RetryInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".RetryInfo"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".RetryInfo"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "retry_delay"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -401,14 +401,14 @@ extension Google_Rpc_RetryInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._retryDelay {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Google_Rpc_RetryInfo, rhs: Google_Rpc_RetryInfo) -> Bool {
+  public static func ==(lhs: Google_Rpc_RetryInfo, rhs: Google_Rpc_RetryInfo) -> Bool {
     if lhs._retryDelay != rhs._retryDelay {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -416,13 +416,13 @@ extension Google_Rpc_RetryInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
 }
 
 extension Google_Rpc_DebugInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".DebugInfo"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".DebugInfo"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "stack_entries"),
     2: .same(proto: "detail"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -435,7 +435,7 @@ extension Google_Rpc_DebugInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.stackEntries.isEmpty {
       try visitor.visitRepeatedStringField(value: self.stackEntries, fieldNumber: 1)
     }
@@ -445,7 +445,7 @@ extension Google_Rpc_DebugInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Google_Rpc_DebugInfo, rhs: Google_Rpc_DebugInfo) -> Bool {
+  public static func ==(lhs: Google_Rpc_DebugInfo, rhs: Google_Rpc_DebugInfo) -> Bool {
     if lhs.stackEntries != rhs.stackEntries {return false}
     if lhs.detail != rhs.detail {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -454,12 +454,12 @@ extension Google_Rpc_DebugInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
 }
 
 extension Google_Rpc_QuotaFailure: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QuotaFailure"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QuotaFailure"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "violations"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -471,14 +471,14 @@ extension Google_Rpc_QuotaFailure: SwiftProtobuf.Message, SwiftProtobuf._Message
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.violations.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.violations, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Google_Rpc_QuotaFailure, rhs: Google_Rpc_QuotaFailure) -> Bool {
+  public static func ==(lhs: Google_Rpc_QuotaFailure, rhs: Google_Rpc_QuotaFailure) -> Bool {
     if lhs.violations != rhs.violations {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -486,13 +486,13 @@ extension Google_Rpc_QuotaFailure: SwiftProtobuf.Message, SwiftProtobuf._Message
 }
 
 extension Google_Rpc_QuotaFailure.Violation: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = Google_Rpc_QuotaFailure.protoMessageName + ".Violation"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = Google_Rpc_QuotaFailure.protoMessageName + ".Violation"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "subject"),
     2: .same(proto: "description"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -505,7 +505,7 @@ extension Google_Rpc_QuotaFailure.Violation: SwiftProtobuf.Message, SwiftProtobu
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.subject.isEmpty {
       try visitor.visitSingularStringField(value: self.subject, fieldNumber: 1)
     }
@@ -515,7 +515,7 @@ extension Google_Rpc_QuotaFailure.Violation: SwiftProtobuf.Message, SwiftProtobu
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Google_Rpc_QuotaFailure.Violation, rhs: Google_Rpc_QuotaFailure.Violation) -> Bool {
+  public static func ==(lhs: Google_Rpc_QuotaFailure.Violation, rhs: Google_Rpc_QuotaFailure.Violation) -> Bool {
     if lhs.subject != rhs.subject {return false}
     if lhs.description_p != rhs.description_p {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -524,14 +524,14 @@ extension Google_Rpc_QuotaFailure.Violation: SwiftProtobuf.Message, SwiftProtobu
 }
 
 extension Google_Rpc_ErrorInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ErrorInfo"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ErrorInfo"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "reason"),
     2: .same(proto: "domain"),
     3: .same(proto: "metadata"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -545,7 +545,7 @@ extension Google_Rpc_ErrorInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.reason.isEmpty {
       try visitor.visitSingularStringField(value: self.reason, fieldNumber: 1)
     }
@@ -558,7 +558,7 @@ extension Google_Rpc_ErrorInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Google_Rpc_ErrorInfo, rhs: Google_Rpc_ErrorInfo) -> Bool {
+  public static func ==(lhs: Google_Rpc_ErrorInfo, rhs: Google_Rpc_ErrorInfo) -> Bool {
     if lhs.reason != rhs.reason {return false}
     if lhs.domain != rhs.domain {return false}
     if lhs.metadata != rhs.metadata {return false}
@@ -568,12 +568,12 @@ extension Google_Rpc_ErrorInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
 }
 
 extension Google_Rpc_PreconditionFailure: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".PreconditionFailure"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".PreconditionFailure"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "violations"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -585,14 +585,14 @@ extension Google_Rpc_PreconditionFailure: SwiftProtobuf.Message, SwiftProtobuf._
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.violations.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.violations, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Google_Rpc_PreconditionFailure, rhs: Google_Rpc_PreconditionFailure) -> Bool {
+  public static func ==(lhs: Google_Rpc_PreconditionFailure, rhs: Google_Rpc_PreconditionFailure) -> Bool {
     if lhs.violations != rhs.violations {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -600,14 +600,14 @@ extension Google_Rpc_PreconditionFailure: SwiftProtobuf.Message, SwiftProtobuf._
 }
 
 extension Google_Rpc_PreconditionFailure.Violation: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = Google_Rpc_PreconditionFailure.protoMessageName + ".Violation"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = Google_Rpc_PreconditionFailure.protoMessageName + ".Violation"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "type"),
     2: .same(proto: "subject"),
     3: .same(proto: "description"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -621,7 +621,7 @@ extension Google_Rpc_PreconditionFailure.Violation: SwiftProtobuf.Message, Swift
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.type.isEmpty {
       try visitor.visitSingularStringField(value: self.type, fieldNumber: 1)
     }
@@ -634,7 +634,7 @@ extension Google_Rpc_PreconditionFailure.Violation: SwiftProtobuf.Message, Swift
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Google_Rpc_PreconditionFailure.Violation, rhs: Google_Rpc_PreconditionFailure.Violation) -> Bool {
+  public static func ==(lhs: Google_Rpc_PreconditionFailure.Violation, rhs: Google_Rpc_PreconditionFailure.Violation) -> Bool {
     if lhs.type != rhs.type {return false}
     if lhs.subject != rhs.subject {return false}
     if lhs.description_p != rhs.description_p {return false}
@@ -644,12 +644,12 @@ extension Google_Rpc_PreconditionFailure.Violation: SwiftProtobuf.Message, Swift
 }
 
 extension Google_Rpc_BadRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".BadRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".BadRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "field_violations"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -661,14 +661,14 @@ extension Google_Rpc_BadRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.fieldViolations.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.fieldViolations, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Google_Rpc_BadRequest, rhs: Google_Rpc_BadRequest) -> Bool {
+  public static func ==(lhs: Google_Rpc_BadRequest, rhs: Google_Rpc_BadRequest) -> Bool {
     if lhs.fieldViolations != rhs.fieldViolations {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -676,13 +676,13 @@ extension Google_Rpc_BadRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
 }
 
 extension Google_Rpc_BadRequest.FieldViolation: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = Google_Rpc_BadRequest.protoMessageName + ".FieldViolation"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = Google_Rpc_BadRequest.protoMessageName + ".FieldViolation"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "field"),
     2: .same(proto: "description"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -695,7 +695,7 @@ extension Google_Rpc_BadRequest.FieldViolation: SwiftProtobuf.Message, SwiftProt
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.field.isEmpty {
       try visitor.visitSingularStringField(value: self.field, fieldNumber: 1)
     }
@@ -705,7 +705,7 @@ extension Google_Rpc_BadRequest.FieldViolation: SwiftProtobuf.Message, SwiftProt
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Google_Rpc_BadRequest.FieldViolation, rhs: Google_Rpc_BadRequest.FieldViolation) -> Bool {
+  public static func ==(lhs: Google_Rpc_BadRequest.FieldViolation, rhs: Google_Rpc_BadRequest.FieldViolation) -> Bool {
     if lhs.field != rhs.field {return false}
     if lhs.description_p != rhs.description_p {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -714,13 +714,13 @@ extension Google_Rpc_BadRequest.FieldViolation: SwiftProtobuf.Message, SwiftProt
 }
 
 extension Google_Rpc_RequestInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".RequestInfo"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".RequestInfo"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "request_id"),
     2: .standard(proto: "serving_data"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -733,7 +733,7 @@ extension Google_Rpc_RequestInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageI
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.requestID.isEmpty {
       try visitor.visitSingularStringField(value: self.requestID, fieldNumber: 1)
     }
@@ -743,7 +743,7 @@ extension Google_Rpc_RequestInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageI
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Google_Rpc_RequestInfo, rhs: Google_Rpc_RequestInfo) -> Bool {
+  public static func ==(lhs: Google_Rpc_RequestInfo, rhs: Google_Rpc_RequestInfo) -> Bool {
     if lhs.requestID != rhs.requestID {return false}
     if lhs.servingData != rhs.servingData {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -752,15 +752,15 @@ extension Google_Rpc_RequestInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageI
 }
 
 extension Google_Rpc_ResourceInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ResourceInfo"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ResourceInfo"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "resource_type"),
     2: .standard(proto: "resource_name"),
     3: .same(proto: "owner"),
     4: .same(proto: "description"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -775,7 +775,7 @@ extension Google_Rpc_ResourceInfo: SwiftProtobuf.Message, SwiftProtobuf._Message
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.resourceType.isEmpty {
       try visitor.visitSingularStringField(value: self.resourceType, fieldNumber: 1)
     }
@@ -791,7 +791,7 @@ extension Google_Rpc_ResourceInfo: SwiftProtobuf.Message, SwiftProtobuf._Message
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Google_Rpc_ResourceInfo, rhs: Google_Rpc_ResourceInfo) -> Bool {
+  public static func ==(lhs: Google_Rpc_ResourceInfo, rhs: Google_Rpc_ResourceInfo) -> Bool {
     if lhs.resourceType != rhs.resourceType {return false}
     if lhs.resourceName != rhs.resourceName {return false}
     if lhs.owner != rhs.owner {return false}
@@ -802,12 +802,12 @@ extension Google_Rpc_ResourceInfo: SwiftProtobuf.Message, SwiftProtobuf._Message
 }
 
 extension Google_Rpc_Help: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Help"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Help"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "links"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -819,14 +819,14 @@ extension Google_Rpc_Help: SwiftProtobuf.Message, SwiftProtobuf._MessageImplemen
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.links.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.links, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Google_Rpc_Help, rhs: Google_Rpc_Help) -> Bool {
+  public static func ==(lhs: Google_Rpc_Help, rhs: Google_Rpc_Help) -> Bool {
     if lhs.links != rhs.links {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -834,13 +834,13 @@ extension Google_Rpc_Help: SwiftProtobuf.Message, SwiftProtobuf._MessageImplemen
 }
 
 extension Google_Rpc_Help.Link: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = Google_Rpc_Help.protoMessageName + ".Link"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = Google_Rpc_Help.protoMessageName + ".Link"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "description"),
     2: .same(proto: "url"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -853,7 +853,7 @@ extension Google_Rpc_Help.Link: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.description_p.isEmpty {
       try visitor.visitSingularStringField(value: self.description_p, fieldNumber: 1)
     }
@@ -863,7 +863,7 @@ extension Google_Rpc_Help.Link: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Google_Rpc_Help.Link, rhs: Google_Rpc_Help.Link) -> Bool {
+  public static func ==(lhs: Google_Rpc_Help.Link, rhs: Google_Rpc_Help.Link) -> Bool {
     if lhs.description_p != rhs.description_p {return false}
     if lhs.url != rhs.url {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -872,13 +872,13 @@ extension Google_Rpc_Help.Link: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
 }
 
 extension Google_Rpc_LocalizedMessage: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".LocalizedMessage"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".LocalizedMessage"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "locale"),
     2: .same(proto: "message"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -891,7 +891,7 @@ extension Google_Rpc_LocalizedMessage: SwiftProtobuf.Message, SwiftProtobuf._Mes
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.locale.isEmpty {
       try visitor.visitSingularStringField(value: self.locale, fieldNumber: 1)
     }
@@ -901,7 +901,7 @@ extension Google_Rpc_LocalizedMessage: SwiftProtobuf.Message, SwiftProtobuf._Mes
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Google_Rpc_LocalizedMessage, rhs: Google_Rpc_LocalizedMessage) -> Bool {
+  public static func ==(lhs: Google_Rpc_LocalizedMessage, rhs: Google_Rpc_LocalizedMessage) -> Bool {
     if lhs.locale != rhs.locale {return false}
     if lhs.message != rhs.message {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}

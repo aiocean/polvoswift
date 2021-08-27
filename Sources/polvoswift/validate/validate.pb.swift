@@ -21,8 +21,8 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// WellKnownRegex contain some well-known patterns.
-enum Validate_KnownRegex: SwiftProtobuf.Enum {
-  typealias RawValue = Int
+public enum Validate_KnownRegex: SwiftProtobuf.Enum {
+  public typealias RawValue = Int
   case unknown // = 0
 
   /// HTTP header name as defined by RFC 7230.
@@ -31,11 +31,11 @@ enum Validate_KnownRegex: SwiftProtobuf.Enum {
   /// HTTP header value as defined by RFC 7230.
   case httpHeaderValue // = 2
 
-  init() {
+  public init() {
     self = .unknown
   }
 
-  init?(rawValue: Int) {
+  public init?(rawValue: Int) {
     switch rawValue {
     case 0: self = .unknown
     case 1: self = .httpHeaderName
@@ -44,7 +44,7 @@ enum Validate_KnownRegex: SwiftProtobuf.Enum {
     }
   }
 
-  var rawValue: Int {
+  public var rawValue: Int {
     switch self {
     case .unknown: return 0
     case .httpHeaderName: return 1
@@ -64,27 +64,27 @@ extension Validate_KnownRegex: CaseIterable {
 
 /// FieldRules encapsulates the rules for each type of field. Depending on the
 /// field, the correct set should be used to ensure proper validations.
-struct Validate_FieldRules {
+public struct Validate_FieldRules {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var message: Validate_MessageRules {
+  public var message: Validate_MessageRules {
     get {return _storage._message ?? Validate_MessageRules()}
     set {_uniqueStorage()._message = newValue}
   }
   /// Returns true if `message` has been explicitly set.
-  var hasMessage: Bool {return _storage._message != nil}
+  public var hasMessage: Bool {return _storage._message != nil}
   /// Clears the value of `message`. Subsequent reads from it will return its default value.
-  mutating func clearMessage() {_uniqueStorage()._message = nil}
+  public mutating func clearMessage() {_uniqueStorage()._message = nil}
 
-  var type: OneOf_Type? {
+  public var type: OneOf_Type? {
     get {return _storage._type}
     set {_uniqueStorage()._type = newValue}
   }
 
   /// Scalar Field Types
-  var float: Validate_FloatRules {
+  public var float: Validate_FloatRules {
     get {
       if case .float(let v)? = _storage._type {return v}
       return Validate_FloatRules()
@@ -92,7 +92,7 @@ struct Validate_FieldRules {
     set {_uniqueStorage()._type = .float(newValue)}
   }
 
-  var double: Validate_DoubleRules {
+  public var double: Validate_DoubleRules {
     get {
       if case .double(let v)? = _storage._type {return v}
       return Validate_DoubleRules()
@@ -100,7 +100,7 @@ struct Validate_FieldRules {
     set {_uniqueStorage()._type = .double(newValue)}
   }
 
-  var int32: Validate_Int32Rules {
+  public var int32: Validate_Int32Rules {
     get {
       if case .int32(let v)? = _storage._type {return v}
       return Validate_Int32Rules()
@@ -108,7 +108,7 @@ struct Validate_FieldRules {
     set {_uniqueStorage()._type = .int32(newValue)}
   }
 
-  var int64: Validate_Int64Rules {
+  public var int64: Validate_Int64Rules {
     get {
       if case .int64(let v)? = _storage._type {return v}
       return Validate_Int64Rules()
@@ -116,7 +116,7 @@ struct Validate_FieldRules {
     set {_uniqueStorage()._type = .int64(newValue)}
   }
 
-  var uint32: Validate_UInt32Rules {
+  public var uint32: Validate_UInt32Rules {
     get {
       if case .uint32(let v)? = _storage._type {return v}
       return Validate_UInt32Rules()
@@ -124,7 +124,7 @@ struct Validate_FieldRules {
     set {_uniqueStorage()._type = .uint32(newValue)}
   }
 
-  var uint64: Validate_UInt64Rules {
+  public var uint64: Validate_UInt64Rules {
     get {
       if case .uint64(let v)? = _storage._type {return v}
       return Validate_UInt64Rules()
@@ -132,7 +132,7 @@ struct Validate_FieldRules {
     set {_uniqueStorage()._type = .uint64(newValue)}
   }
 
-  var sint32: Validate_SInt32Rules {
+  public var sint32: Validate_SInt32Rules {
     get {
       if case .sint32(let v)? = _storage._type {return v}
       return Validate_SInt32Rules()
@@ -140,7 +140,7 @@ struct Validate_FieldRules {
     set {_uniqueStorage()._type = .sint32(newValue)}
   }
 
-  var sint64: Validate_SInt64Rules {
+  public var sint64: Validate_SInt64Rules {
     get {
       if case .sint64(let v)? = _storage._type {return v}
       return Validate_SInt64Rules()
@@ -148,7 +148,7 @@ struct Validate_FieldRules {
     set {_uniqueStorage()._type = .sint64(newValue)}
   }
 
-  var fixed32: Validate_Fixed32Rules {
+  public var fixed32: Validate_Fixed32Rules {
     get {
       if case .fixed32(let v)? = _storage._type {return v}
       return Validate_Fixed32Rules()
@@ -156,7 +156,7 @@ struct Validate_FieldRules {
     set {_uniqueStorage()._type = .fixed32(newValue)}
   }
 
-  var fixed64: Validate_Fixed64Rules {
+  public var fixed64: Validate_Fixed64Rules {
     get {
       if case .fixed64(let v)? = _storage._type {return v}
       return Validate_Fixed64Rules()
@@ -164,7 +164,7 @@ struct Validate_FieldRules {
     set {_uniqueStorage()._type = .fixed64(newValue)}
   }
 
-  var sfixed32: Validate_SFixed32Rules {
+  public var sfixed32: Validate_SFixed32Rules {
     get {
       if case .sfixed32(let v)? = _storage._type {return v}
       return Validate_SFixed32Rules()
@@ -172,7 +172,7 @@ struct Validate_FieldRules {
     set {_uniqueStorage()._type = .sfixed32(newValue)}
   }
 
-  var sfixed64: Validate_SFixed64Rules {
+  public var sfixed64: Validate_SFixed64Rules {
     get {
       if case .sfixed64(let v)? = _storage._type {return v}
       return Validate_SFixed64Rules()
@@ -180,7 +180,7 @@ struct Validate_FieldRules {
     set {_uniqueStorage()._type = .sfixed64(newValue)}
   }
 
-  var bool: Validate_BoolRules {
+  public var bool: Validate_BoolRules {
     get {
       if case .bool(let v)? = _storage._type {return v}
       return Validate_BoolRules()
@@ -188,7 +188,7 @@ struct Validate_FieldRules {
     set {_uniqueStorage()._type = .bool(newValue)}
   }
 
-  var string: Validate_StringRules {
+  public var string: Validate_StringRules {
     get {
       if case .string(let v)? = _storage._type {return v}
       return Validate_StringRules()
@@ -196,7 +196,7 @@ struct Validate_FieldRules {
     set {_uniqueStorage()._type = .string(newValue)}
   }
 
-  var bytes: Validate_BytesRules {
+  public var bytes: Validate_BytesRules {
     get {
       if case .bytes(let v)? = _storage._type {return v}
       return Validate_BytesRules()
@@ -205,7 +205,7 @@ struct Validate_FieldRules {
   }
 
   /// Complex Field Types
-  var `enum`: Validate_EnumRules {
+  public var `enum`: Validate_EnumRules {
     get {
       if case .enum(let v)? = _storage._type {return v}
       return Validate_EnumRules()
@@ -213,7 +213,7 @@ struct Validate_FieldRules {
     set {_uniqueStorage()._type = .enum(newValue)}
   }
 
-  var repeated: Validate_RepeatedRules {
+  public var repeated: Validate_RepeatedRules {
     get {
       if case .repeated(let v)? = _storage._type {return v}
       return Validate_RepeatedRules()
@@ -221,7 +221,7 @@ struct Validate_FieldRules {
     set {_uniqueStorage()._type = .repeated(newValue)}
   }
 
-  var map: Validate_MapRules {
+  public var map: Validate_MapRules {
     get {
       if case .map(let v)? = _storage._type {return v}
       return Validate_MapRules()
@@ -230,7 +230,7 @@ struct Validate_FieldRules {
   }
 
   /// Well-Known Field Types
-  var any: Validate_AnyRules {
+  public var any: Validate_AnyRules {
     get {
       if case .any(let v)? = _storage._type {return v}
       return Validate_AnyRules()
@@ -238,7 +238,7 @@ struct Validate_FieldRules {
     set {_uniqueStorage()._type = .any(newValue)}
   }
 
-  var duration: Validate_DurationRules {
+  public var duration: Validate_DurationRules {
     get {
       if case .duration(let v)? = _storage._type {return v}
       return Validate_DurationRules()
@@ -246,7 +246,7 @@ struct Validate_FieldRules {
     set {_uniqueStorage()._type = .duration(newValue)}
   }
 
-  var timestamp: Validate_TimestampRules {
+  public var timestamp: Validate_TimestampRules {
     get {
       if case .timestamp(let v)? = _storage._type {return v}
       return Validate_TimestampRules()
@@ -254,9 +254,9 @@ struct Validate_FieldRules {
     set {_uniqueStorage()._type = .timestamp(newValue)}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  enum OneOf_Type: Equatable {
+  public enum OneOf_Type: Equatable {
     /// Scalar Field Types
     case float(Validate_FloatRules)
     case double(Validate_DoubleRules)
@@ -283,7 +283,7 @@ struct Validate_FieldRules {
     case timestamp(Validate_TimestampRules)
 
   #if !swift(>=4.1)
-    static func ==(lhs: Validate_FieldRules.OneOf_Type, rhs: Validate_FieldRules.OneOf_Type) -> Bool {
+    public static func ==(lhs: Validate_FieldRules.OneOf_Type, rhs: Validate_FieldRules.OneOf_Type) -> Bool {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
@@ -378,95 +378,95 @@ struct Validate_FieldRules {
   #endif
   }
 
-  init() {}
+  public init() {}
 
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
 /// FloatRules describes the constraints applied to `float` values
-struct Validate_FloatRules {
+public struct Validate_FloatRules {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// Const specifies that this field must be exactly the specified value
-  var const: Float {
+  public var const: Float {
     get {return _const ?? 0}
     set {_const = newValue}
   }
   /// Returns true if `const` has been explicitly set.
-  var hasConst: Bool {return self._const != nil}
+  public var hasConst: Bool {return self._const != nil}
   /// Clears the value of `const`. Subsequent reads from it will return its default value.
-  mutating func clearConst() {self._const = nil}
+  public mutating func clearConst() {self._const = nil}
 
   /// Lt specifies that this field must be less than the specified value,
   /// exclusive
-  var lt: Float {
+  public var lt: Float {
     get {return _lt ?? 0}
     set {_lt = newValue}
   }
   /// Returns true if `lt` has been explicitly set.
-  var hasLt: Bool {return self._lt != nil}
+  public var hasLt: Bool {return self._lt != nil}
   /// Clears the value of `lt`. Subsequent reads from it will return its default value.
-  mutating func clearLt() {self._lt = nil}
+  public mutating func clearLt() {self._lt = nil}
 
   /// Lte specifies that this field must be less than or equal to the
   /// specified value, inclusive
-  var lte: Float {
+  public var lte: Float {
     get {return _lte ?? 0}
     set {_lte = newValue}
   }
   /// Returns true if `lte` has been explicitly set.
-  var hasLte: Bool {return self._lte != nil}
+  public var hasLte: Bool {return self._lte != nil}
   /// Clears the value of `lte`. Subsequent reads from it will return its default value.
-  mutating func clearLte() {self._lte = nil}
+  public mutating func clearLte() {self._lte = nil}
 
   /// Gt specifies that this field must be greater than the specified value,
   /// exclusive. If the value of Gt is larger than a specified Lt or Lte, the
   /// range is reversed.
-  var gt: Float {
+  public var gt: Float {
     get {return _gt ?? 0}
     set {_gt = newValue}
   }
   /// Returns true if `gt` has been explicitly set.
-  var hasGt: Bool {return self._gt != nil}
+  public var hasGt: Bool {return self._gt != nil}
   /// Clears the value of `gt`. Subsequent reads from it will return its default value.
-  mutating func clearGt() {self._gt = nil}
+  public mutating func clearGt() {self._gt = nil}
 
   /// Gte specifies that this field must be greater than or equal to the
   /// specified value, inclusive. If the value of Gte is larger than a
   /// specified Lt or Lte, the range is reversed.
-  var gte: Float {
+  public var gte: Float {
     get {return _gte ?? 0}
     set {_gte = newValue}
   }
   /// Returns true if `gte` has been explicitly set.
-  var hasGte: Bool {return self._gte != nil}
+  public var hasGte: Bool {return self._gte != nil}
   /// Clears the value of `gte`. Subsequent reads from it will return its default value.
-  mutating func clearGte() {self._gte = nil}
+  public mutating func clearGte() {self._gte = nil}
 
   /// In specifies that this field must be equal to one of the specified
   /// values
-  var `in`: [Float] = []
+  public var `in`: [Float] = []
 
   /// NotIn specifies that this field cannot be equal to one of the specified
   /// values
-  var notIn: [Float] = []
+  public var notIn: [Float] = []
 
   /// IgnoreEmpty specifies that the validation rules of this field should be
   /// evaluated only if the field is not empty
-  var ignoreEmpty: Bool {
+  public var ignoreEmpty: Bool {
     get {return _ignoreEmpty ?? false}
     set {_ignoreEmpty = newValue}
   }
   /// Returns true if `ignoreEmpty` has been explicitly set.
-  var hasIgnoreEmpty: Bool {return self._ignoreEmpty != nil}
+  public var hasIgnoreEmpty: Bool {return self._ignoreEmpty != nil}
   /// Clears the value of `ignoreEmpty`. Subsequent reads from it will return its default value.
-  mutating func clearIgnoreEmpty() {self._ignoreEmpty = nil}
+  public mutating func clearIgnoreEmpty() {self._ignoreEmpty = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _const: Float? = nil
   fileprivate var _lt: Float? = nil
@@ -477,89 +477,89 @@ struct Validate_FloatRules {
 }
 
 /// DoubleRules describes the constraints applied to `double` values
-struct Validate_DoubleRules {
+public struct Validate_DoubleRules {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// Const specifies that this field must be exactly the specified value
-  var const: Double {
+  public var const: Double {
     get {return _const ?? 0}
     set {_const = newValue}
   }
   /// Returns true if `const` has been explicitly set.
-  var hasConst: Bool {return self._const != nil}
+  public var hasConst: Bool {return self._const != nil}
   /// Clears the value of `const`. Subsequent reads from it will return its default value.
-  mutating func clearConst() {self._const = nil}
+  public mutating func clearConst() {self._const = nil}
 
   /// Lt specifies that this field must be less than the specified value,
   /// exclusive
-  var lt: Double {
+  public var lt: Double {
     get {return _lt ?? 0}
     set {_lt = newValue}
   }
   /// Returns true if `lt` has been explicitly set.
-  var hasLt: Bool {return self._lt != nil}
+  public var hasLt: Bool {return self._lt != nil}
   /// Clears the value of `lt`. Subsequent reads from it will return its default value.
-  mutating func clearLt() {self._lt = nil}
+  public mutating func clearLt() {self._lt = nil}
 
   /// Lte specifies that this field must be less than or equal to the
   /// specified value, inclusive
-  var lte: Double {
+  public var lte: Double {
     get {return _lte ?? 0}
     set {_lte = newValue}
   }
   /// Returns true if `lte` has been explicitly set.
-  var hasLte: Bool {return self._lte != nil}
+  public var hasLte: Bool {return self._lte != nil}
   /// Clears the value of `lte`. Subsequent reads from it will return its default value.
-  mutating func clearLte() {self._lte = nil}
+  public mutating func clearLte() {self._lte = nil}
 
   /// Gt specifies that this field must be greater than the specified value,
   /// exclusive. If the value of Gt is larger than a specified Lt or Lte, the
   /// range is reversed.
-  var gt: Double {
+  public var gt: Double {
     get {return _gt ?? 0}
     set {_gt = newValue}
   }
   /// Returns true if `gt` has been explicitly set.
-  var hasGt: Bool {return self._gt != nil}
+  public var hasGt: Bool {return self._gt != nil}
   /// Clears the value of `gt`. Subsequent reads from it will return its default value.
-  mutating func clearGt() {self._gt = nil}
+  public mutating func clearGt() {self._gt = nil}
 
   /// Gte specifies that this field must be greater than or equal to the
   /// specified value, inclusive. If the value of Gte is larger than a
   /// specified Lt or Lte, the range is reversed.
-  var gte: Double {
+  public var gte: Double {
     get {return _gte ?? 0}
     set {_gte = newValue}
   }
   /// Returns true if `gte` has been explicitly set.
-  var hasGte: Bool {return self._gte != nil}
+  public var hasGte: Bool {return self._gte != nil}
   /// Clears the value of `gte`. Subsequent reads from it will return its default value.
-  mutating func clearGte() {self._gte = nil}
+  public mutating func clearGte() {self._gte = nil}
 
   /// In specifies that this field must be equal to one of the specified
   /// values
-  var `in`: [Double] = []
+  public var `in`: [Double] = []
 
   /// NotIn specifies that this field cannot be equal to one of the specified
   /// values
-  var notIn: [Double] = []
+  public var notIn: [Double] = []
 
   /// IgnoreEmpty specifies that the validation rules of this field should be
   /// evaluated only if the field is not empty
-  var ignoreEmpty: Bool {
+  public var ignoreEmpty: Bool {
     get {return _ignoreEmpty ?? false}
     set {_ignoreEmpty = newValue}
   }
   /// Returns true if `ignoreEmpty` has been explicitly set.
-  var hasIgnoreEmpty: Bool {return self._ignoreEmpty != nil}
+  public var hasIgnoreEmpty: Bool {return self._ignoreEmpty != nil}
   /// Clears the value of `ignoreEmpty`. Subsequent reads from it will return its default value.
-  mutating func clearIgnoreEmpty() {self._ignoreEmpty = nil}
+  public mutating func clearIgnoreEmpty() {self._ignoreEmpty = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _const: Double? = nil
   fileprivate var _lt: Double? = nil
@@ -570,89 +570,89 @@ struct Validate_DoubleRules {
 }
 
 /// Int32Rules describes the constraints applied to `int32` values
-struct Validate_Int32Rules {
+public struct Validate_Int32Rules {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// Const specifies that this field must be exactly the specified value
-  var const: Int32 {
+  public var const: Int32 {
     get {return _const ?? 0}
     set {_const = newValue}
   }
   /// Returns true if `const` has been explicitly set.
-  var hasConst: Bool {return self._const != nil}
+  public var hasConst: Bool {return self._const != nil}
   /// Clears the value of `const`. Subsequent reads from it will return its default value.
-  mutating func clearConst() {self._const = nil}
+  public mutating func clearConst() {self._const = nil}
 
   /// Lt specifies that this field must be less than the specified value,
   /// exclusive
-  var lt: Int32 {
+  public var lt: Int32 {
     get {return _lt ?? 0}
     set {_lt = newValue}
   }
   /// Returns true if `lt` has been explicitly set.
-  var hasLt: Bool {return self._lt != nil}
+  public var hasLt: Bool {return self._lt != nil}
   /// Clears the value of `lt`. Subsequent reads from it will return its default value.
-  mutating func clearLt() {self._lt = nil}
+  public mutating func clearLt() {self._lt = nil}
 
   /// Lte specifies that this field must be less than or equal to the
   /// specified value, inclusive
-  var lte: Int32 {
+  public var lte: Int32 {
     get {return _lte ?? 0}
     set {_lte = newValue}
   }
   /// Returns true if `lte` has been explicitly set.
-  var hasLte: Bool {return self._lte != nil}
+  public var hasLte: Bool {return self._lte != nil}
   /// Clears the value of `lte`. Subsequent reads from it will return its default value.
-  mutating func clearLte() {self._lte = nil}
+  public mutating func clearLte() {self._lte = nil}
 
   /// Gt specifies that this field must be greater than the specified value,
   /// exclusive. If the value of Gt is larger than a specified Lt or Lte, the
   /// range is reversed.
-  var gt: Int32 {
+  public var gt: Int32 {
     get {return _gt ?? 0}
     set {_gt = newValue}
   }
   /// Returns true if `gt` has been explicitly set.
-  var hasGt: Bool {return self._gt != nil}
+  public var hasGt: Bool {return self._gt != nil}
   /// Clears the value of `gt`. Subsequent reads from it will return its default value.
-  mutating func clearGt() {self._gt = nil}
+  public mutating func clearGt() {self._gt = nil}
 
   /// Gte specifies that this field must be greater than or equal to the
   /// specified value, inclusive. If the value of Gte is larger than a
   /// specified Lt or Lte, the range is reversed.
-  var gte: Int32 {
+  public var gte: Int32 {
     get {return _gte ?? 0}
     set {_gte = newValue}
   }
   /// Returns true if `gte` has been explicitly set.
-  var hasGte: Bool {return self._gte != nil}
+  public var hasGte: Bool {return self._gte != nil}
   /// Clears the value of `gte`. Subsequent reads from it will return its default value.
-  mutating func clearGte() {self._gte = nil}
+  public mutating func clearGte() {self._gte = nil}
 
   /// In specifies that this field must be equal to one of the specified
   /// values
-  var `in`: [Int32] = []
+  public var `in`: [Int32] = []
 
   /// NotIn specifies that this field cannot be equal to one of the specified
   /// values
-  var notIn: [Int32] = []
+  public var notIn: [Int32] = []
 
   /// IgnoreEmpty specifies that the validation rules of this field should be
   /// evaluated only if the field is not empty
-  var ignoreEmpty: Bool {
+  public var ignoreEmpty: Bool {
     get {return _ignoreEmpty ?? false}
     set {_ignoreEmpty = newValue}
   }
   /// Returns true if `ignoreEmpty` has been explicitly set.
-  var hasIgnoreEmpty: Bool {return self._ignoreEmpty != nil}
+  public var hasIgnoreEmpty: Bool {return self._ignoreEmpty != nil}
   /// Clears the value of `ignoreEmpty`. Subsequent reads from it will return its default value.
-  mutating func clearIgnoreEmpty() {self._ignoreEmpty = nil}
+  public mutating func clearIgnoreEmpty() {self._ignoreEmpty = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _const: Int32? = nil
   fileprivate var _lt: Int32? = nil
@@ -663,89 +663,89 @@ struct Validate_Int32Rules {
 }
 
 /// Int64Rules describes the constraints applied to `int64` values
-struct Validate_Int64Rules {
+public struct Validate_Int64Rules {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// Const specifies that this field must be exactly the specified value
-  var const: Int64 {
+  public var const: Int64 {
     get {return _const ?? 0}
     set {_const = newValue}
   }
   /// Returns true if `const` has been explicitly set.
-  var hasConst: Bool {return self._const != nil}
+  public var hasConst: Bool {return self._const != nil}
   /// Clears the value of `const`. Subsequent reads from it will return its default value.
-  mutating func clearConst() {self._const = nil}
+  public mutating func clearConst() {self._const = nil}
 
   /// Lt specifies that this field must be less than the specified value,
   /// exclusive
-  var lt: Int64 {
+  public var lt: Int64 {
     get {return _lt ?? 0}
     set {_lt = newValue}
   }
   /// Returns true if `lt` has been explicitly set.
-  var hasLt: Bool {return self._lt != nil}
+  public var hasLt: Bool {return self._lt != nil}
   /// Clears the value of `lt`. Subsequent reads from it will return its default value.
-  mutating func clearLt() {self._lt = nil}
+  public mutating func clearLt() {self._lt = nil}
 
   /// Lte specifies that this field must be less than or equal to the
   /// specified value, inclusive
-  var lte: Int64 {
+  public var lte: Int64 {
     get {return _lte ?? 0}
     set {_lte = newValue}
   }
   /// Returns true if `lte` has been explicitly set.
-  var hasLte: Bool {return self._lte != nil}
+  public var hasLte: Bool {return self._lte != nil}
   /// Clears the value of `lte`. Subsequent reads from it will return its default value.
-  mutating func clearLte() {self._lte = nil}
+  public mutating func clearLte() {self._lte = nil}
 
   /// Gt specifies that this field must be greater than the specified value,
   /// exclusive. If the value of Gt is larger than a specified Lt or Lte, the
   /// range is reversed.
-  var gt: Int64 {
+  public var gt: Int64 {
     get {return _gt ?? 0}
     set {_gt = newValue}
   }
   /// Returns true if `gt` has been explicitly set.
-  var hasGt: Bool {return self._gt != nil}
+  public var hasGt: Bool {return self._gt != nil}
   /// Clears the value of `gt`. Subsequent reads from it will return its default value.
-  mutating func clearGt() {self._gt = nil}
+  public mutating func clearGt() {self._gt = nil}
 
   /// Gte specifies that this field must be greater than or equal to the
   /// specified value, inclusive. If the value of Gte is larger than a
   /// specified Lt or Lte, the range is reversed.
-  var gte: Int64 {
+  public var gte: Int64 {
     get {return _gte ?? 0}
     set {_gte = newValue}
   }
   /// Returns true if `gte` has been explicitly set.
-  var hasGte: Bool {return self._gte != nil}
+  public var hasGte: Bool {return self._gte != nil}
   /// Clears the value of `gte`. Subsequent reads from it will return its default value.
-  mutating func clearGte() {self._gte = nil}
+  public mutating func clearGte() {self._gte = nil}
 
   /// In specifies that this field must be equal to one of the specified
   /// values
-  var `in`: [Int64] = []
+  public var `in`: [Int64] = []
 
   /// NotIn specifies that this field cannot be equal to one of the specified
   /// values
-  var notIn: [Int64] = []
+  public var notIn: [Int64] = []
 
   /// IgnoreEmpty specifies that the validation rules of this field should be
   /// evaluated only if the field is not empty
-  var ignoreEmpty: Bool {
+  public var ignoreEmpty: Bool {
     get {return _ignoreEmpty ?? false}
     set {_ignoreEmpty = newValue}
   }
   /// Returns true if `ignoreEmpty` has been explicitly set.
-  var hasIgnoreEmpty: Bool {return self._ignoreEmpty != nil}
+  public var hasIgnoreEmpty: Bool {return self._ignoreEmpty != nil}
   /// Clears the value of `ignoreEmpty`. Subsequent reads from it will return its default value.
-  mutating func clearIgnoreEmpty() {self._ignoreEmpty = nil}
+  public mutating func clearIgnoreEmpty() {self._ignoreEmpty = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _const: Int64? = nil
   fileprivate var _lt: Int64? = nil
@@ -756,89 +756,89 @@ struct Validate_Int64Rules {
 }
 
 /// UInt32Rules describes the constraints applied to `uint32` values
-struct Validate_UInt32Rules {
+public struct Validate_UInt32Rules {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// Const specifies that this field must be exactly the specified value
-  var const: UInt32 {
+  public var const: UInt32 {
     get {return _const ?? 0}
     set {_const = newValue}
   }
   /// Returns true if `const` has been explicitly set.
-  var hasConst: Bool {return self._const != nil}
+  public var hasConst: Bool {return self._const != nil}
   /// Clears the value of `const`. Subsequent reads from it will return its default value.
-  mutating func clearConst() {self._const = nil}
+  public mutating func clearConst() {self._const = nil}
 
   /// Lt specifies that this field must be less than the specified value,
   /// exclusive
-  var lt: UInt32 {
+  public var lt: UInt32 {
     get {return _lt ?? 0}
     set {_lt = newValue}
   }
   /// Returns true if `lt` has been explicitly set.
-  var hasLt: Bool {return self._lt != nil}
+  public var hasLt: Bool {return self._lt != nil}
   /// Clears the value of `lt`. Subsequent reads from it will return its default value.
-  mutating func clearLt() {self._lt = nil}
+  public mutating func clearLt() {self._lt = nil}
 
   /// Lte specifies that this field must be less than or equal to the
   /// specified value, inclusive
-  var lte: UInt32 {
+  public var lte: UInt32 {
     get {return _lte ?? 0}
     set {_lte = newValue}
   }
   /// Returns true if `lte` has been explicitly set.
-  var hasLte: Bool {return self._lte != nil}
+  public var hasLte: Bool {return self._lte != nil}
   /// Clears the value of `lte`. Subsequent reads from it will return its default value.
-  mutating func clearLte() {self._lte = nil}
+  public mutating func clearLte() {self._lte = nil}
 
   /// Gt specifies that this field must be greater than the specified value,
   /// exclusive. If the value of Gt is larger than a specified Lt or Lte, the
   /// range is reversed.
-  var gt: UInt32 {
+  public var gt: UInt32 {
     get {return _gt ?? 0}
     set {_gt = newValue}
   }
   /// Returns true if `gt` has been explicitly set.
-  var hasGt: Bool {return self._gt != nil}
+  public var hasGt: Bool {return self._gt != nil}
   /// Clears the value of `gt`. Subsequent reads from it will return its default value.
-  mutating func clearGt() {self._gt = nil}
+  public mutating func clearGt() {self._gt = nil}
 
   /// Gte specifies that this field must be greater than or equal to the
   /// specified value, inclusive. If the value of Gte is larger than a
   /// specified Lt or Lte, the range is reversed.
-  var gte: UInt32 {
+  public var gte: UInt32 {
     get {return _gte ?? 0}
     set {_gte = newValue}
   }
   /// Returns true if `gte` has been explicitly set.
-  var hasGte: Bool {return self._gte != nil}
+  public var hasGte: Bool {return self._gte != nil}
   /// Clears the value of `gte`. Subsequent reads from it will return its default value.
-  mutating func clearGte() {self._gte = nil}
+  public mutating func clearGte() {self._gte = nil}
 
   /// In specifies that this field must be equal to one of the specified
   /// values
-  var `in`: [UInt32] = []
+  public var `in`: [UInt32] = []
 
   /// NotIn specifies that this field cannot be equal to one of the specified
   /// values
-  var notIn: [UInt32] = []
+  public var notIn: [UInt32] = []
 
   /// IgnoreEmpty specifies that the validation rules of this field should be
   /// evaluated only if the field is not empty
-  var ignoreEmpty: Bool {
+  public var ignoreEmpty: Bool {
     get {return _ignoreEmpty ?? false}
     set {_ignoreEmpty = newValue}
   }
   /// Returns true if `ignoreEmpty` has been explicitly set.
-  var hasIgnoreEmpty: Bool {return self._ignoreEmpty != nil}
+  public var hasIgnoreEmpty: Bool {return self._ignoreEmpty != nil}
   /// Clears the value of `ignoreEmpty`. Subsequent reads from it will return its default value.
-  mutating func clearIgnoreEmpty() {self._ignoreEmpty = nil}
+  public mutating func clearIgnoreEmpty() {self._ignoreEmpty = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _const: UInt32? = nil
   fileprivate var _lt: UInt32? = nil
@@ -849,89 +849,89 @@ struct Validate_UInt32Rules {
 }
 
 /// UInt64Rules describes the constraints applied to `uint64` values
-struct Validate_UInt64Rules {
+public struct Validate_UInt64Rules {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// Const specifies that this field must be exactly the specified value
-  var const: UInt64 {
+  public var const: UInt64 {
     get {return _const ?? 0}
     set {_const = newValue}
   }
   /// Returns true if `const` has been explicitly set.
-  var hasConst: Bool {return self._const != nil}
+  public var hasConst: Bool {return self._const != nil}
   /// Clears the value of `const`. Subsequent reads from it will return its default value.
-  mutating func clearConst() {self._const = nil}
+  public mutating func clearConst() {self._const = nil}
 
   /// Lt specifies that this field must be less than the specified value,
   /// exclusive
-  var lt: UInt64 {
+  public var lt: UInt64 {
     get {return _lt ?? 0}
     set {_lt = newValue}
   }
   /// Returns true if `lt` has been explicitly set.
-  var hasLt: Bool {return self._lt != nil}
+  public var hasLt: Bool {return self._lt != nil}
   /// Clears the value of `lt`. Subsequent reads from it will return its default value.
-  mutating func clearLt() {self._lt = nil}
+  public mutating func clearLt() {self._lt = nil}
 
   /// Lte specifies that this field must be less than or equal to the
   /// specified value, inclusive
-  var lte: UInt64 {
+  public var lte: UInt64 {
     get {return _lte ?? 0}
     set {_lte = newValue}
   }
   /// Returns true if `lte` has been explicitly set.
-  var hasLte: Bool {return self._lte != nil}
+  public var hasLte: Bool {return self._lte != nil}
   /// Clears the value of `lte`. Subsequent reads from it will return its default value.
-  mutating func clearLte() {self._lte = nil}
+  public mutating func clearLte() {self._lte = nil}
 
   /// Gt specifies that this field must be greater than the specified value,
   /// exclusive. If the value of Gt is larger than a specified Lt or Lte, the
   /// range is reversed.
-  var gt: UInt64 {
+  public var gt: UInt64 {
     get {return _gt ?? 0}
     set {_gt = newValue}
   }
   /// Returns true if `gt` has been explicitly set.
-  var hasGt: Bool {return self._gt != nil}
+  public var hasGt: Bool {return self._gt != nil}
   /// Clears the value of `gt`. Subsequent reads from it will return its default value.
-  mutating func clearGt() {self._gt = nil}
+  public mutating func clearGt() {self._gt = nil}
 
   /// Gte specifies that this field must be greater than or equal to the
   /// specified value, inclusive. If the value of Gte is larger than a
   /// specified Lt or Lte, the range is reversed.
-  var gte: UInt64 {
+  public var gte: UInt64 {
     get {return _gte ?? 0}
     set {_gte = newValue}
   }
   /// Returns true if `gte` has been explicitly set.
-  var hasGte: Bool {return self._gte != nil}
+  public var hasGte: Bool {return self._gte != nil}
   /// Clears the value of `gte`. Subsequent reads from it will return its default value.
-  mutating func clearGte() {self._gte = nil}
+  public mutating func clearGte() {self._gte = nil}
 
   /// In specifies that this field must be equal to one of the specified
   /// values
-  var `in`: [UInt64] = []
+  public var `in`: [UInt64] = []
 
   /// NotIn specifies that this field cannot be equal to one of the specified
   /// values
-  var notIn: [UInt64] = []
+  public var notIn: [UInt64] = []
 
   /// IgnoreEmpty specifies that the validation rules of this field should be
   /// evaluated only if the field is not empty
-  var ignoreEmpty: Bool {
+  public var ignoreEmpty: Bool {
     get {return _ignoreEmpty ?? false}
     set {_ignoreEmpty = newValue}
   }
   /// Returns true if `ignoreEmpty` has been explicitly set.
-  var hasIgnoreEmpty: Bool {return self._ignoreEmpty != nil}
+  public var hasIgnoreEmpty: Bool {return self._ignoreEmpty != nil}
   /// Clears the value of `ignoreEmpty`. Subsequent reads from it will return its default value.
-  mutating func clearIgnoreEmpty() {self._ignoreEmpty = nil}
+  public mutating func clearIgnoreEmpty() {self._ignoreEmpty = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _const: UInt64? = nil
   fileprivate var _lt: UInt64? = nil
@@ -942,89 +942,89 @@ struct Validate_UInt64Rules {
 }
 
 /// SInt32Rules describes the constraints applied to `sint32` values
-struct Validate_SInt32Rules {
+public struct Validate_SInt32Rules {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// Const specifies that this field must be exactly the specified value
-  var const: Int32 {
+  public var const: Int32 {
     get {return _const ?? 0}
     set {_const = newValue}
   }
   /// Returns true if `const` has been explicitly set.
-  var hasConst: Bool {return self._const != nil}
+  public var hasConst: Bool {return self._const != nil}
   /// Clears the value of `const`. Subsequent reads from it will return its default value.
-  mutating func clearConst() {self._const = nil}
+  public mutating func clearConst() {self._const = nil}
 
   /// Lt specifies that this field must be less than the specified value,
   /// exclusive
-  var lt: Int32 {
+  public var lt: Int32 {
     get {return _lt ?? 0}
     set {_lt = newValue}
   }
   /// Returns true if `lt` has been explicitly set.
-  var hasLt: Bool {return self._lt != nil}
+  public var hasLt: Bool {return self._lt != nil}
   /// Clears the value of `lt`. Subsequent reads from it will return its default value.
-  mutating func clearLt() {self._lt = nil}
+  public mutating func clearLt() {self._lt = nil}
 
   /// Lte specifies that this field must be less than or equal to the
   /// specified value, inclusive
-  var lte: Int32 {
+  public var lte: Int32 {
     get {return _lte ?? 0}
     set {_lte = newValue}
   }
   /// Returns true if `lte` has been explicitly set.
-  var hasLte: Bool {return self._lte != nil}
+  public var hasLte: Bool {return self._lte != nil}
   /// Clears the value of `lte`. Subsequent reads from it will return its default value.
-  mutating func clearLte() {self._lte = nil}
+  public mutating func clearLte() {self._lte = nil}
 
   /// Gt specifies that this field must be greater than the specified value,
   /// exclusive. If the value of Gt is larger than a specified Lt or Lte, the
   /// range is reversed.
-  var gt: Int32 {
+  public var gt: Int32 {
     get {return _gt ?? 0}
     set {_gt = newValue}
   }
   /// Returns true if `gt` has been explicitly set.
-  var hasGt: Bool {return self._gt != nil}
+  public var hasGt: Bool {return self._gt != nil}
   /// Clears the value of `gt`. Subsequent reads from it will return its default value.
-  mutating func clearGt() {self._gt = nil}
+  public mutating func clearGt() {self._gt = nil}
 
   /// Gte specifies that this field must be greater than or equal to the
   /// specified value, inclusive. If the value of Gte is larger than a
   /// specified Lt or Lte, the range is reversed.
-  var gte: Int32 {
+  public var gte: Int32 {
     get {return _gte ?? 0}
     set {_gte = newValue}
   }
   /// Returns true if `gte` has been explicitly set.
-  var hasGte: Bool {return self._gte != nil}
+  public var hasGte: Bool {return self._gte != nil}
   /// Clears the value of `gte`. Subsequent reads from it will return its default value.
-  mutating func clearGte() {self._gte = nil}
+  public mutating func clearGte() {self._gte = nil}
 
   /// In specifies that this field must be equal to one of the specified
   /// values
-  var `in`: [Int32] = []
+  public var `in`: [Int32] = []
 
   /// NotIn specifies that this field cannot be equal to one of the specified
   /// values
-  var notIn: [Int32] = []
+  public var notIn: [Int32] = []
 
   /// IgnoreEmpty specifies that the validation rules of this field should be
   /// evaluated only if the field is not empty
-  var ignoreEmpty: Bool {
+  public var ignoreEmpty: Bool {
     get {return _ignoreEmpty ?? false}
     set {_ignoreEmpty = newValue}
   }
   /// Returns true if `ignoreEmpty` has been explicitly set.
-  var hasIgnoreEmpty: Bool {return self._ignoreEmpty != nil}
+  public var hasIgnoreEmpty: Bool {return self._ignoreEmpty != nil}
   /// Clears the value of `ignoreEmpty`. Subsequent reads from it will return its default value.
-  mutating func clearIgnoreEmpty() {self._ignoreEmpty = nil}
+  public mutating func clearIgnoreEmpty() {self._ignoreEmpty = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _const: Int32? = nil
   fileprivate var _lt: Int32? = nil
@@ -1035,89 +1035,89 @@ struct Validate_SInt32Rules {
 }
 
 /// SInt64Rules describes the constraints applied to `sint64` values
-struct Validate_SInt64Rules {
+public struct Validate_SInt64Rules {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// Const specifies that this field must be exactly the specified value
-  var const: Int64 {
+  public var const: Int64 {
     get {return _const ?? 0}
     set {_const = newValue}
   }
   /// Returns true if `const` has been explicitly set.
-  var hasConst: Bool {return self._const != nil}
+  public var hasConst: Bool {return self._const != nil}
   /// Clears the value of `const`. Subsequent reads from it will return its default value.
-  mutating func clearConst() {self._const = nil}
+  public mutating func clearConst() {self._const = nil}
 
   /// Lt specifies that this field must be less than the specified value,
   /// exclusive
-  var lt: Int64 {
+  public var lt: Int64 {
     get {return _lt ?? 0}
     set {_lt = newValue}
   }
   /// Returns true if `lt` has been explicitly set.
-  var hasLt: Bool {return self._lt != nil}
+  public var hasLt: Bool {return self._lt != nil}
   /// Clears the value of `lt`. Subsequent reads from it will return its default value.
-  mutating func clearLt() {self._lt = nil}
+  public mutating func clearLt() {self._lt = nil}
 
   /// Lte specifies that this field must be less than or equal to the
   /// specified value, inclusive
-  var lte: Int64 {
+  public var lte: Int64 {
     get {return _lte ?? 0}
     set {_lte = newValue}
   }
   /// Returns true if `lte` has been explicitly set.
-  var hasLte: Bool {return self._lte != nil}
+  public var hasLte: Bool {return self._lte != nil}
   /// Clears the value of `lte`. Subsequent reads from it will return its default value.
-  mutating func clearLte() {self._lte = nil}
+  public mutating func clearLte() {self._lte = nil}
 
   /// Gt specifies that this field must be greater than the specified value,
   /// exclusive. If the value of Gt is larger than a specified Lt or Lte, the
   /// range is reversed.
-  var gt: Int64 {
+  public var gt: Int64 {
     get {return _gt ?? 0}
     set {_gt = newValue}
   }
   /// Returns true if `gt` has been explicitly set.
-  var hasGt: Bool {return self._gt != nil}
+  public var hasGt: Bool {return self._gt != nil}
   /// Clears the value of `gt`. Subsequent reads from it will return its default value.
-  mutating func clearGt() {self._gt = nil}
+  public mutating func clearGt() {self._gt = nil}
 
   /// Gte specifies that this field must be greater than or equal to the
   /// specified value, inclusive. If the value of Gte is larger than a
   /// specified Lt or Lte, the range is reversed.
-  var gte: Int64 {
+  public var gte: Int64 {
     get {return _gte ?? 0}
     set {_gte = newValue}
   }
   /// Returns true if `gte` has been explicitly set.
-  var hasGte: Bool {return self._gte != nil}
+  public var hasGte: Bool {return self._gte != nil}
   /// Clears the value of `gte`. Subsequent reads from it will return its default value.
-  mutating func clearGte() {self._gte = nil}
+  public mutating func clearGte() {self._gte = nil}
 
   /// In specifies that this field must be equal to one of the specified
   /// values
-  var `in`: [Int64] = []
+  public var `in`: [Int64] = []
 
   /// NotIn specifies that this field cannot be equal to one of the specified
   /// values
-  var notIn: [Int64] = []
+  public var notIn: [Int64] = []
 
   /// IgnoreEmpty specifies that the validation rules of this field should be
   /// evaluated only if the field is not empty
-  var ignoreEmpty: Bool {
+  public var ignoreEmpty: Bool {
     get {return _ignoreEmpty ?? false}
     set {_ignoreEmpty = newValue}
   }
   /// Returns true if `ignoreEmpty` has been explicitly set.
-  var hasIgnoreEmpty: Bool {return self._ignoreEmpty != nil}
+  public var hasIgnoreEmpty: Bool {return self._ignoreEmpty != nil}
   /// Clears the value of `ignoreEmpty`. Subsequent reads from it will return its default value.
-  mutating func clearIgnoreEmpty() {self._ignoreEmpty = nil}
+  public mutating func clearIgnoreEmpty() {self._ignoreEmpty = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _const: Int64? = nil
   fileprivate var _lt: Int64? = nil
@@ -1128,89 +1128,89 @@ struct Validate_SInt64Rules {
 }
 
 /// Fixed32Rules describes the constraints applied to `fixed32` values
-struct Validate_Fixed32Rules {
+public struct Validate_Fixed32Rules {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// Const specifies that this field must be exactly the specified value
-  var const: UInt32 {
+  public var const: UInt32 {
     get {return _const ?? 0}
     set {_const = newValue}
   }
   /// Returns true if `const` has been explicitly set.
-  var hasConst: Bool {return self._const != nil}
+  public var hasConst: Bool {return self._const != nil}
   /// Clears the value of `const`. Subsequent reads from it will return its default value.
-  mutating func clearConst() {self._const = nil}
+  public mutating func clearConst() {self._const = nil}
 
   /// Lt specifies that this field must be less than the specified value,
   /// exclusive
-  var lt: UInt32 {
+  public var lt: UInt32 {
     get {return _lt ?? 0}
     set {_lt = newValue}
   }
   /// Returns true if `lt` has been explicitly set.
-  var hasLt: Bool {return self._lt != nil}
+  public var hasLt: Bool {return self._lt != nil}
   /// Clears the value of `lt`. Subsequent reads from it will return its default value.
-  mutating func clearLt() {self._lt = nil}
+  public mutating func clearLt() {self._lt = nil}
 
   /// Lte specifies that this field must be less than or equal to the
   /// specified value, inclusive
-  var lte: UInt32 {
+  public var lte: UInt32 {
     get {return _lte ?? 0}
     set {_lte = newValue}
   }
   /// Returns true if `lte` has been explicitly set.
-  var hasLte: Bool {return self._lte != nil}
+  public var hasLte: Bool {return self._lte != nil}
   /// Clears the value of `lte`. Subsequent reads from it will return its default value.
-  mutating func clearLte() {self._lte = nil}
+  public mutating func clearLte() {self._lte = nil}
 
   /// Gt specifies that this field must be greater than the specified value,
   /// exclusive. If the value of Gt is larger than a specified Lt or Lte, the
   /// range is reversed.
-  var gt: UInt32 {
+  public var gt: UInt32 {
     get {return _gt ?? 0}
     set {_gt = newValue}
   }
   /// Returns true if `gt` has been explicitly set.
-  var hasGt: Bool {return self._gt != nil}
+  public var hasGt: Bool {return self._gt != nil}
   /// Clears the value of `gt`. Subsequent reads from it will return its default value.
-  mutating func clearGt() {self._gt = nil}
+  public mutating func clearGt() {self._gt = nil}
 
   /// Gte specifies that this field must be greater than or equal to the
   /// specified value, inclusive. If the value of Gte is larger than a
   /// specified Lt or Lte, the range is reversed.
-  var gte: UInt32 {
+  public var gte: UInt32 {
     get {return _gte ?? 0}
     set {_gte = newValue}
   }
   /// Returns true if `gte` has been explicitly set.
-  var hasGte: Bool {return self._gte != nil}
+  public var hasGte: Bool {return self._gte != nil}
   /// Clears the value of `gte`. Subsequent reads from it will return its default value.
-  mutating func clearGte() {self._gte = nil}
+  public mutating func clearGte() {self._gte = nil}
 
   /// In specifies that this field must be equal to one of the specified
   /// values
-  var `in`: [UInt32] = []
+  public var `in`: [UInt32] = []
 
   /// NotIn specifies that this field cannot be equal to one of the specified
   /// values
-  var notIn: [UInt32] = []
+  public var notIn: [UInt32] = []
 
   /// IgnoreEmpty specifies that the validation rules of this field should be
   /// evaluated only if the field is not empty
-  var ignoreEmpty: Bool {
+  public var ignoreEmpty: Bool {
     get {return _ignoreEmpty ?? false}
     set {_ignoreEmpty = newValue}
   }
   /// Returns true if `ignoreEmpty` has been explicitly set.
-  var hasIgnoreEmpty: Bool {return self._ignoreEmpty != nil}
+  public var hasIgnoreEmpty: Bool {return self._ignoreEmpty != nil}
   /// Clears the value of `ignoreEmpty`. Subsequent reads from it will return its default value.
-  mutating func clearIgnoreEmpty() {self._ignoreEmpty = nil}
+  public mutating func clearIgnoreEmpty() {self._ignoreEmpty = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _const: UInt32? = nil
   fileprivate var _lt: UInt32? = nil
@@ -1221,89 +1221,89 @@ struct Validate_Fixed32Rules {
 }
 
 /// Fixed64Rules describes the constraints applied to `fixed64` values
-struct Validate_Fixed64Rules {
+public struct Validate_Fixed64Rules {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// Const specifies that this field must be exactly the specified value
-  var const: UInt64 {
+  public var const: UInt64 {
     get {return _const ?? 0}
     set {_const = newValue}
   }
   /// Returns true if `const` has been explicitly set.
-  var hasConst: Bool {return self._const != nil}
+  public var hasConst: Bool {return self._const != nil}
   /// Clears the value of `const`. Subsequent reads from it will return its default value.
-  mutating func clearConst() {self._const = nil}
+  public mutating func clearConst() {self._const = nil}
 
   /// Lt specifies that this field must be less than the specified value,
   /// exclusive
-  var lt: UInt64 {
+  public var lt: UInt64 {
     get {return _lt ?? 0}
     set {_lt = newValue}
   }
   /// Returns true if `lt` has been explicitly set.
-  var hasLt: Bool {return self._lt != nil}
+  public var hasLt: Bool {return self._lt != nil}
   /// Clears the value of `lt`. Subsequent reads from it will return its default value.
-  mutating func clearLt() {self._lt = nil}
+  public mutating func clearLt() {self._lt = nil}
 
   /// Lte specifies that this field must be less than or equal to the
   /// specified value, inclusive
-  var lte: UInt64 {
+  public var lte: UInt64 {
     get {return _lte ?? 0}
     set {_lte = newValue}
   }
   /// Returns true if `lte` has been explicitly set.
-  var hasLte: Bool {return self._lte != nil}
+  public var hasLte: Bool {return self._lte != nil}
   /// Clears the value of `lte`. Subsequent reads from it will return its default value.
-  mutating func clearLte() {self._lte = nil}
+  public mutating func clearLte() {self._lte = nil}
 
   /// Gt specifies that this field must be greater than the specified value,
   /// exclusive. If the value of Gt is larger than a specified Lt or Lte, the
   /// range is reversed.
-  var gt: UInt64 {
+  public var gt: UInt64 {
     get {return _gt ?? 0}
     set {_gt = newValue}
   }
   /// Returns true if `gt` has been explicitly set.
-  var hasGt: Bool {return self._gt != nil}
+  public var hasGt: Bool {return self._gt != nil}
   /// Clears the value of `gt`. Subsequent reads from it will return its default value.
-  mutating func clearGt() {self._gt = nil}
+  public mutating func clearGt() {self._gt = nil}
 
   /// Gte specifies that this field must be greater than or equal to the
   /// specified value, inclusive. If the value of Gte is larger than a
   /// specified Lt or Lte, the range is reversed.
-  var gte: UInt64 {
+  public var gte: UInt64 {
     get {return _gte ?? 0}
     set {_gte = newValue}
   }
   /// Returns true if `gte` has been explicitly set.
-  var hasGte: Bool {return self._gte != nil}
+  public var hasGte: Bool {return self._gte != nil}
   /// Clears the value of `gte`. Subsequent reads from it will return its default value.
-  mutating func clearGte() {self._gte = nil}
+  public mutating func clearGte() {self._gte = nil}
 
   /// In specifies that this field must be equal to one of the specified
   /// values
-  var `in`: [UInt64] = []
+  public var `in`: [UInt64] = []
 
   /// NotIn specifies that this field cannot be equal to one of the specified
   /// values
-  var notIn: [UInt64] = []
+  public var notIn: [UInt64] = []
 
   /// IgnoreEmpty specifies that the validation rules of this field should be
   /// evaluated only if the field is not empty
-  var ignoreEmpty: Bool {
+  public var ignoreEmpty: Bool {
     get {return _ignoreEmpty ?? false}
     set {_ignoreEmpty = newValue}
   }
   /// Returns true if `ignoreEmpty` has been explicitly set.
-  var hasIgnoreEmpty: Bool {return self._ignoreEmpty != nil}
+  public var hasIgnoreEmpty: Bool {return self._ignoreEmpty != nil}
   /// Clears the value of `ignoreEmpty`. Subsequent reads from it will return its default value.
-  mutating func clearIgnoreEmpty() {self._ignoreEmpty = nil}
+  public mutating func clearIgnoreEmpty() {self._ignoreEmpty = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _const: UInt64? = nil
   fileprivate var _lt: UInt64? = nil
@@ -1314,89 +1314,89 @@ struct Validate_Fixed64Rules {
 }
 
 /// SFixed32Rules describes the constraints applied to `sfixed32` values
-struct Validate_SFixed32Rules {
+public struct Validate_SFixed32Rules {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// Const specifies that this field must be exactly the specified value
-  var const: Int32 {
+  public var const: Int32 {
     get {return _const ?? 0}
     set {_const = newValue}
   }
   /// Returns true if `const` has been explicitly set.
-  var hasConst: Bool {return self._const != nil}
+  public var hasConst: Bool {return self._const != nil}
   /// Clears the value of `const`. Subsequent reads from it will return its default value.
-  mutating func clearConst() {self._const = nil}
+  public mutating func clearConst() {self._const = nil}
 
   /// Lt specifies that this field must be less than the specified value,
   /// exclusive
-  var lt: Int32 {
+  public var lt: Int32 {
     get {return _lt ?? 0}
     set {_lt = newValue}
   }
   /// Returns true if `lt` has been explicitly set.
-  var hasLt: Bool {return self._lt != nil}
+  public var hasLt: Bool {return self._lt != nil}
   /// Clears the value of `lt`. Subsequent reads from it will return its default value.
-  mutating func clearLt() {self._lt = nil}
+  public mutating func clearLt() {self._lt = nil}
 
   /// Lte specifies that this field must be less than or equal to the
   /// specified value, inclusive
-  var lte: Int32 {
+  public var lte: Int32 {
     get {return _lte ?? 0}
     set {_lte = newValue}
   }
   /// Returns true if `lte` has been explicitly set.
-  var hasLte: Bool {return self._lte != nil}
+  public var hasLte: Bool {return self._lte != nil}
   /// Clears the value of `lte`. Subsequent reads from it will return its default value.
-  mutating func clearLte() {self._lte = nil}
+  public mutating func clearLte() {self._lte = nil}
 
   /// Gt specifies that this field must be greater than the specified value,
   /// exclusive. If the value of Gt is larger than a specified Lt or Lte, the
   /// range is reversed.
-  var gt: Int32 {
+  public var gt: Int32 {
     get {return _gt ?? 0}
     set {_gt = newValue}
   }
   /// Returns true if `gt` has been explicitly set.
-  var hasGt: Bool {return self._gt != nil}
+  public var hasGt: Bool {return self._gt != nil}
   /// Clears the value of `gt`. Subsequent reads from it will return its default value.
-  mutating func clearGt() {self._gt = nil}
+  public mutating func clearGt() {self._gt = nil}
 
   /// Gte specifies that this field must be greater than or equal to the
   /// specified value, inclusive. If the value of Gte is larger than a
   /// specified Lt or Lte, the range is reversed.
-  var gte: Int32 {
+  public var gte: Int32 {
     get {return _gte ?? 0}
     set {_gte = newValue}
   }
   /// Returns true if `gte` has been explicitly set.
-  var hasGte: Bool {return self._gte != nil}
+  public var hasGte: Bool {return self._gte != nil}
   /// Clears the value of `gte`. Subsequent reads from it will return its default value.
-  mutating func clearGte() {self._gte = nil}
+  public mutating func clearGte() {self._gte = nil}
 
   /// In specifies that this field must be equal to one of the specified
   /// values
-  var `in`: [Int32] = []
+  public var `in`: [Int32] = []
 
   /// NotIn specifies that this field cannot be equal to one of the specified
   /// values
-  var notIn: [Int32] = []
+  public var notIn: [Int32] = []
 
   /// IgnoreEmpty specifies that the validation rules of this field should be
   /// evaluated only if the field is not empty
-  var ignoreEmpty: Bool {
+  public var ignoreEmpty: Bool {
     get {return _ignoreEmpty ?? false}
     set {_ignoreEmpty = newValue}
   }
   /// Returns true if `ignoreEmpty` has been explicitly set.
-  var hasIgnoreEmpty: Bool {return self._ignoreEmpty != nil}
+  public var hasIgnoreEmpty: Bool {return self._ignoreEmpty != nil}
   /// Clears the value of `ignoreEmpty`. Subsequent reads from it will return its default value.
-  mutating func clearIgnoreEmpty() {self._ignoreEmpty = nil}
+  public mutating func clearIgnoreEmpty() {self._ignoreEmpty = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _const: Int32? = nil
   fileprivate var _lt: Int32? = nil
@@ -1407,89 +1407,89 @@ struct Validate_SFixed32Rules {
 }
 
 /// SFixed64Rules describes the constraints applied to `sfixed64` values
-struct Validate_SFixed64Rules {
+public struct Validate_SFixed64Rules {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// Const specifies that this field must be exactly the specified value
-  var const: Int64 {
+  public var const: Int64 {
     get {return _const ?? 0}
     set {_const = newValue}
   }
   /// Returns true if `const` has been explicitly set.
-  var hasConst: Bool {return self._const != nil}
+  public var hasConst: Bool {return self._const != nil}
   /// Clears the value of `const`. Subsequent reads from it will return its default value.
-  mutating func clearConst() {self._const = nil}
+  public mutating func clearConst() {self._const = nil}
 
   /// Lt specifies that this field must be less than the specified value,
   /// exclusive
-  var lt: Int64 {
+  public var lt: Int64 {
     get {return _lt ?? 0}
     set {_lt = newValue}
   }
   /// Returns true if `lt` has been explicitly set.
-  var hasLt: Bool {return self._lt != nil}
+  public var hasLt: Bool {return self._lt != nil}
   /// Clears the value of `lt`. Subsequent reads from it will return its default value.
-  mutating func clearLt() {self._lt = nil}
+  public mutating func clearLt() {self._lt = nil}
 
   /// Lte specifies that this field must be less than or equal to the
   /// specified value, inclusive
-  var lte: Int64 {
+  public var lte: Int64 {
     get {return _lte ?? 0}
     set {_lte = newValue}
   }
   /// Returns true if `lte` has been explicitly set.
-  var hasLte: Bool {return self._lte != nil}
+  public var hasLte: Bool {return self._lte != nil}
   /// Clears the value of `lte`. Subsequent reads from it will return its default value.
-  mutating func clearLte() {self._lte = nil}
+  public mutating func clearLte() {self._lte = nil}
 
   /// Gt specifies that this field must be greater than the specified value,
   /// exclusive. If the value of Gt is larger than a specified Lt or Lte, the
   /// range is reversed.
-  var gt: Int64 {
+  public var gt: Int64 {
     get {return _gt ?? 0}
     set {_gt = newValue}
   }
   /// Returns true if `gt` has been explicitly set.
-  var hasGt: Bool {return self._gt != nil}
+  public var hasGt: Bool {return self._gt != nil}
   /// Clears the value of `gt`. Subsequent reads from it will return its default value.
-  mutating func clearGt() {self._gt = nil}
+  public mutating func clearGt() {self._gt = nil}
 
   /// Gte specifies that this field must be greater than or equal to the
   /// specified value, inclusive. If the value of Gte is larger than a
   /// specified Lt or Lte, the range is reversed.
-  var gte: Int64 {
+  public var gte: Int64 {
     get {return _gte ?? 0}
     set {_gte = newValue}
   }
   /// Returns true if `gte` has been explicitly set.
-  var hasGte: Bool {return self._gte != nil}
+  public var hasGte: Bool {return self._gte != nil}
   /// Clears the value of `gte`. Subsequent reads from it will return its default value.
-  mutating func clearGte() {self._gte = nil}
+  public mutating func clearGte() {self._gte = nil}
 
   /// In specifies that this field must be equal to one of the specified
   /// values
-  var `in`: [Int64] = []
+  public var `in`: [Int64] = []
 
   /// NotIn specifies that this field cannot be equal to one of the specified
   /// values
-  var notIn: [Int64] = []
+  public var notIn: [Int64] = []
 
   /// IgnoreEmpty specifies that the validation rules of this field should be
   /// evaluated only if the field is not empty
-  var ignoreEmpty: Bool {
+  public var ignoreEmpty: Bool {
     get {return _ignoreEmpty ?? false}
     set {_ignoreEmpty = newValue}
   }
   /// Returns true if `ignoreEmpty` has been explicitly set.
-  var hasIgnoreEmpty: Bool {return self._ignoreEmpty != nil}
+  public var hasIgnoreEmpty: Bool {return self._ignoreEmpty != nil}
   /// Clears the value of `ignoreEmpty`. Subsequent reads from it will return its default value.
-  mutating func clearIgnoreEmpty() {self._ignoreEmpty = nil}
+  public mutating func clearIgnoreEmpty() {self._ignoreEmpty = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _const: Int64? = nil
   fileprivate var _lt: Int64? = nil
@@ -1500,193 +1500,193 @@ struct Validate_SFixed64Rules {
 }
 
 /// BoolRules describes the constraints applied to `bool` values
-struct Validate_BoolRules {
+public struct Validate_BoolRules {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// Const specifies that this field must be exactly the specified value
-  var const: Bool {
+  public var const: Bool {
     get {return _const ?? false}
     set {_const = newValue}
   }
   /// Returns true if `const` has been explicitly set.
-  var hasConst: Bool {return self._const != nil}
+  public var hasConst: Bool {return self._const != nil}
   /// Clears the value of `const`. Subsequent reads from it will return its default value.
-  mutating func clearConst() {self._const = nil}
+  public mutating func clearConst() {self._const = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _const: Bool? = nil
 }
 
 /// StringRules describe the constraints applied to `string` values
-struct Validate_StringRules {
+public struct Validate_StringRules {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// Const specifies that this field must be exactly the specified value
-  var const: String {
+  public var const: String {
     get {return _storage._const ?? String()}
     set {_uniqueStorage()._const = newValue}
   }
   /// Returns true if `const` has been explicitly set.
-  var hasConst: Bool {return _storage._const != nil}
+  public var hasConst: Bool {return _storage._const != nil}
   /// Clears the value of `const`. Subsequent reads from it will return its default value.
-  mutating func clearConst() {_uniqueStorage()._const = nil}
+  public mutating func clearConst() {_uniqueStorage()._const = nil}
 
   /// Len specifies that this field must be the specified number of
   /// characters (Unicode code points). Note that the number of
   /// characters may differ from the number of bytes in the string.
-  var len: UInt64 {
+  public var len: UInt64 {
     get {return _storage._len ?? 0}
     set {_uniqueStorage()._len = newValue}
   }
   /// Returns true if `len` has been explicitly set.
-  var hasLen: Bool {return _storage._len != nil}
+  public var hasLen: Bool {return _storage._len != nil}
   /// Clears the value of `len`. Subsequent reads from it will return its default value.
-  mutating func clearLen() {_uniqueStorage()._len = nil}
+  public mutating func clearLen() {_uniqueStorage()._len = nil}
 
   /// MinLen specifies that this field must be the specified number of
   /// characters (Unicode code points) at a minimum. Note that the number of
   /// characters may differ from the number of bytes in the string.
-  var minLen: UInt64 {
+  public var minLen: UInt64 {
     get {return _storage._minLen ?? 0}
     set {_uniqueStorage()._minLen = newValue}
   }
   /// Returns true if `minLen` has been explicitly set.
-  var hasMinLen: Bool {return _storage._minLen != nil}
+  public var hasMinLen: Bool {return _storage._minLen != nil}
   /// Clears the value of `minLen`. Subsequent reads from it will return its default value.
-  mutating func clearMinLen() {_uniqueStorage()._minLen = nil}
+  public mutating func clearMinLen() {_uniqueStorage()._minLen = nil}
 
   /// MaxLen specifies that this field must be the specified number of
   /// characters (Unicode code points) at a maximum. Note that the number of
   /// characters may differ from the number of bytes in the string.
-  var maxLen: UInt64 {
+  public var maxLen: UInt64 {
     get {return _storage._maxLen ?? 0}
     set {_uniqueStorage()._maxLen = newValue}
   }
   /// Returns true if `maxLen` has been explicitly set.
-  var hasMaxLen: Bool {return _storage._maxLen != nil}
+  public var hasMaxLen: Bool {return _storage._maxLen != nil}
   /// Clears the value of `maxLen`. Subsequent reads from it will return its default value.
-  mutating func clearMaxLen() {_uniqueStorage()._maxLen = nil}
+  public mutating func clearMaxLen() {_uniqueStorage()._maxLen = nil}
 
   /// LenBytes specifies that this field must be the specified number of bytes
   /// at a minimum
-  var lenBytes: UInt64 {
+  public var lenBytes: UInt64 {
     get {return _storage._lenBytes ?? 0}
     set {_uniqueStorage()._lenBytes = newValue}
   }
   /// Returns true if `lenBytes` has been explicitly set.
-  var hasLenBytes: Bool {return _storage._lenBytes != nil}
+  public var hasLenBytes: Bool {return _storage._lenBytes != nil}
   /// Clears the value of `lenBytes`. Subsequent reads from it will return its default value.
-  mutating func clearLenBytes() {_uniqueStorage()._lenBytes = nil}
+  public mutating func clearLenBytes() {_uniqueStorage()._lenBytes = nil}
 
   /// MinBytes specifies that this field must be the specified number of bytes
   /// at a minimum
-  var minBytes: UInt64 {
+  public var minBytes: UInt64 {
     get {return _storage._minBytes ?? 0}
     set {_uniqueStorage()._minBytes = newValue}
   }
   /// Returns true if `minBytes` has been explicitly set.
-  var hasMinBytes: Bool {return _storage._minBytes != nil}
+  public var hasMinBytes: Bool {return _storage._minBytes != nil}
   /// Clears the value of `minBytes`. Subsequent reads from it will return its default value.
-  mutating func clearMinBytes() {_uniqueStorage()._minBytes = nil}
+  public mutating func clearMinBytes() {_uniqueStorage()._minBytes = nil}
 
   /// MaxBytes specifies that this field must be the specified number of bytes
   /// at a maximum
-  var maxBytes: UInt64 {
+  public var maxBytes: UInt64 {
     get {return _storage._maxBytes ?? 0}
     set {_uniqueStorage()._maxBytes = newValue}
   }
   /// Returns true if `maxBytes` has been explicitly set.
-  var hasMaxBytes: Bool {return _storage._maxBytes != nil}
+  public var hasMaxBytes: Bool {return _storage._maxBytes != nil}
   /// Clears the value of `maxBytes`. Subsequent reads from it will return its default value.
-  mutating func clearMaxBytes() {_uniqueStorage()._maxBytes = nil}
+  public mutating func clearMaxBytes() {_uniqueStorage()._maxBytes = nil}
 
   /// Pattern specifes that this field must match against the specified
   /// regular expression (RE2 syntax). The included expression should elide
   /// any delimiters.
-  var pattern: String {
+  public var pattern: String {
     get {return _storage._pattern ?? String()}
     set {_uniqueStorage()._pattern = newValue}
   }
   /// Returns true if `pattern` has been explicitly set.
-  var hasPattern: Bool {return _storage._pattern != nil}
+  public var hasPattern: Bool {return _storage._pattern != nil}
   /// Clears the value of `pattern`. Subsequent reads from it will return its default value.
-  mutating func clearPattern() {_uniqueStorage()._pattern = nil}
+  public mutating func clearPattern() {_uniqueStorage()._pattern = nil}
 
   /// Prefix specifies that this field must have the specified substring at
   /// the beginning of the string.
-  var prefix: String {
+  public var prefix: String {
     get {return _storage._prefix ?? String()}
     set {_uniqueStorage()._prefix = newValue}
   }
   /// Returns true if `prefix` has been explicitly set.
-  var hasPrefix: Bool {return _storage._prefix != nil}
+  public var hasPrefix: Bool {return _storage._prefix != nil}
   /// Clears the value of `prefix`. Subsequent reads from it will return its default value.
-  mutating func clearPrefix() {_uniqueStorage()._prefix = nil}
+  public mutating func clearPrefix() {_uniqueStorage()._prefix = nil}
 
   /// Suffix specifies that this field must have the specified substring at
   /// the end of the string.
-  var suffix: String {
+  public var suffix: String {
     get {return _storage._suffix ?? String()}
     set {_uniqueStorage()._suffix = newValue}
   }
   /// Returns true if `suffix` has been explicitly set.
-  var hasSuffix: Bool {return _storage._suffix != nil}
+  public var hasSuffix: Bool {return _storage._suffix != nil}
   /// Clears the value of `suffix`. Subsequent reads from it will return its default value.
-  mutating func clearSuffix() {_uniqueStorage()._suffix = nil}
+  public mutating func clearSuffix() {_uniqueStorage()._suffix = nil}
 
   /// Contains specifies that this field must have the specified substring
   /// anywhere in the string.
-  var contains: String {
+  public var contains: String {
     get {return _storage._contains ?? String()}
     set {_uniqueStorage()._contains = newValue}
   }
   /// Returns true if `contains` has been explicitly set.
-  var hasContains: Bool {return _storage._contains != nil}
+  public var hasContains: Bool {return _storage._contains != nil}
   /// Clears the value of `contains`. Subsequent reads from it will return its default value.
-  mutating func clearContains() {_uniqueStorage()._contains = nil}
+  public mutating func clearContains() {_uniqueStorage()._contains = nil}
 
   /// NotContains specifies that this field cannot have the specified substring
   /// anywhere in the string.
-  var notContains: String {
+  public var notContains: String {
     get {return _storage._notContains ?? String()}
     set {_uniqueStorage()._notContains = newValue}
   }
   /// Returns true if `notContains` has been explicitly set.
-  var hasNotContains: Bool {return _storage._notContains != nil}
+  public var hasNotContains: Bool {return _storage._notContains != nil}
   /// Clears the value of `notContains`. Subsequent reads from it will return its default value.
-  mutating func clearNotContains() {_uniqueStorage()._notContains = nil}
+  public mutating func clearNotContains() {_uniqueStorage()._notContains = nil}
 
   /// In specifies that this field must be equal to one of the specified
   /// values
-  var `in`: [String] {
+  public var `in`: [String] {
     get {return _storage._in}
     set {_uniqueStorage()._in = newValue}
   }
 
   /// NotIn specifies that this field cannot be equal to one of the specified
   /// values
-  var notIn: [String] {
+  public var notIn: [String] {
     get {return _storage._notIn}
     set {_uniqueStorage()._notIn = newValue}
   }
 
   /// WellKnown rules provide advanced constraints against common string
   /// patterns
-  var wellKnown: OneOf_WellKnown? {
+  public var wellKnown: OneOf_WellKnown? {
     get {return _storage._wellKnown}
     set {_uniqueStorage()._wellKnown = newValue}
   }
 
   /// Email specifies that the field must be a valid email address as
   /// defined by RFC 5322
-  var email: Bool {
+  public var email: Bool {
     get {
       if case .email(let v)? = _storage._wellKnown {return v}
       return false
@@ -1697,7 +1697,7 @@ struct Validate_StringRules {
   /// Hostname specifies that the field must be a valid hostname as
   /// defined by RFC 1034. This constraint does not support
   /// internationalized domain names (IDNs).
-  var hostname: Bool {
+  public var hostname: Bool {
     get {
       if case .hostname(let v)? = _storage._wellKnown {return v}
       return false
@@ -1707,7 +1707,7 @@ struct Validate_StringRules {
 
   /// Ip specifies that the field must be a valid IP (v4 or v6) address.
   /// Valid IPv6 addresses should not include surrounding square brackets.
-  var ip: Bool {
+  public var ip: Bool {
     get {
       if case .ip(let v)? = _storage._wellKnown {return v}
       return false
@@ -1716,7 +1716,7 @@ struct Validate_StringRules {
   }
 
   /// Ipv4 specifies that the field must be a valid IPv4 address.
-  var ipv4: Bool {
+  public var ipv4: Bool {
     get {
       if case .ipv4(let v)? = _storage._wellKnown {return v}
       return false
@@ -1726,7 +1726,7 @@ struct Validate_StringRules {
 
   /// Ipv6 specifies that the field must be a valid IPv6 address. Valid
   /// IPv6 addresses should not include surrounding square brackets.
-  var ipv6: Bool {
+  public var ipv6: Bool {
     get {
       if case .ipv6(let v)? = _storage._wellKnown {return v}
       return false
@@ -1736,7 +1736,7 @@ struct Validate_StringRules {
 
   /// Uri specifies that the field must be a valid, absolute URI as defined
   /// by RFC 3986
-  var uri: Bool {
+  public var uri: Bool {
     get {
       if case .uri(let v)? = _storage._wellKnown {return v}
       return false
@@ -1746,7 +1746,7 @@ struct Validate_StringRules {
 
   /// UriRef specifies that the field must be a valid URI as defined by RFC
   /// 3986 and may be relative or absolute.
-  var uriRef: Bool {
+  public var uriRef: Bool {
     get {
       if case .uriRef(let v)? = _storage._wellKnown {return v}
       return false
@@ -1757,7 +1757,7 @@ struct Validate_StringRules {
   /// Address specifies that the field must be either a valid hostname as
   /// defined by RFC 1034 (which does not support internationalized domain
   /// names or IDNs), or it can be a valid IP (v4 or v6).
-  var address: Bool {
+  public var address: Bool {
     get {
       if case .address(let v)? = _storage._wellKnown {return v}
       return false
@@ -1767,7 +1767,7 @@ struct Validate_StringRules {
 
   /// Uuid specifies that the field must be a valid UUID as defined by
   /// RFC 4122
-  var uuid: Bool {
+  public var uuid: Bool {
     get {
       if case .uuid(let v)? = _storage._wellKnown {return v}
       return false
@@ -1776,7 +1776,7 @@ struct Validate_StringRules {
   }
 
   /// WellKnownRegex specifies a common well known pattern defined as a regex.
-  var wellKnownRegex: Validate_KnownRegex {
+  public var wellKnownRegex: Validate_KnownRegex {
     get {
       if case .wellKnownRegex(let v)? = _storage._wellKnown {return v}
       return .unknown
@@ -1789,31 +1789,31 @@ struct Validate_StringRules {
   /// By default, this is true, and HTTP header validations are RFC-compliant.
   /// Setting to false will enable a looser validations that only disallows
   /// \r\n\0 characters, which can be used to bypass header matching rules.
-  var strict: Bool {
+  public var strict: Bool {
     get {return _storage._strict ?? true}
     set {_uniqueStorage()._strict = newValue}
   }
   /// Returns true if `strict` has been explicitly set.
-  var hasStrict: Bool {return _storage._strict != nil}
+  public var hasStrict: Bool {return _storage._strict != nil}
   /// Clears the value of `strict`. Subsequent reads from it will return its default value.
-  mutating func clearStrict() {_uniqueStorage()._strict = nil}
+  public mutating func clearStrict() {_uniqueStorage()._strict = nil}
 
   /// IgnoreEmpty specifies that the validation rules of this field should be
   /// evaluated only if the field is not empty
-  var ignoreEmpty: Bool {
+  public var ignoreEmpty: Bool {
     get {return _storage._ignoreEmpty ?? false}
     set {_uniqueStorage()._ignoreEmpty = newValue}
   }
   /// Returns true if `ignoreEmpty` has been explicitly set.
-  var hasIgnoreEmpty: Bool {return _storage._ignoreEmpty != nil}
+  public var hasIgnoreEmpty: Bool {return _storage._ignoreEmpty != nil}
   /// Clears the value of `ignoreEmpty`. Subsequent reads from it will return its default value.
-  mutating func clearIgnoreEmpty() {_uniqueStorage()._ignoreEmpty = nil}
+  public mutating func clearIgnoreEmpty() {_uniqueStorage()._ignoreEmpty = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   /// WellKnown rules provide advanced constraints against common string
   /// patterns
-  enum OneOf_WellKnown: Equatable {
+  public enum OneOf_WellKnown: Equatable {
     /// Email specifies that the field must be a valid email address as
     /// defined by RFC 5322
     case email(Bool)
@@ -1846,7 +1846,7 @@ struct Validate_StringRules {
     case wellKnownRegex(Validate_KnownRegex)
 
   #if !swift(>=4.1)
-    static func ==(lhs: Validate_StringRules.OneOf_WellKnown, rhs: Validate_StringRules.OneOf_WellKnown) -> Bool {
+    public static func ==(lhs: Validate_StringRules.OneOf_WellKnown, rhs: Validate_StringRules.OneOf_WellKnown) -> Bool {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
@@ -1897,119 +1897,119 @@ struct Validate_StringRules {
   #endif
   }
 
-  init() {}
+  public init() {}
 
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
 /// BytesRules describe the constraints applied to `bytes` values
-struct Validate_BytesRules {
+public struct Validate_BytesRules {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// Const specifies that this field must be exactly the specified value
-  var const: Data {
+  public var const: Data {
     get {return _const ?? Data()}
     set {_const = newValue}
   }
   /// Returns true if `const` has been explicitly set.
-  var hasConst: Bool {return self._const != nil}
+  public var hasConst: Bool {return self._const != nil}
   /// Clears the value of `const`. Subsequent reads from it will return its default value.
-  mutating func clearConst() {self._const = nil}
+  public mutating func clearConst() {self._const = nil}
 
   /// Len specifies that this field must be the specified number of bytes
-  var len: UInt64 {
+  public var len: UInt64 {
     get {return _len ?? 0}
     set {_len = newValue}
   }
   /// Returns true if `len` has been explicitly set.
-  var hasLen: Bool {return self._len != nil}
+  public var hasLen: Bool {return self._len != nil}
   /// Clears the value of `len`. Subsequent reads from it will return its default value.
-  mutating func clearLen() {self._len = nil}
+  public mutating func clearLen() {self._len = nil}
 
   /// MinLen specifies that this field must be the specified number of bytes
   /// at a minimum
-  var minLen: UInt64 {
+  public var minLen: UInt64 {
     get {return _minLen ?? 0}
     set {_minLen = newValue}
   }
   /// Returns true if `minLen` has been explicitly set.
-  var hasMinLen: Bool {return self._minLen != nil}
+  public var hasMinLen: Bool {return self._minLen != nil}
   /// Clears the value of `minLen`. Subsequent reads from it will return its default value.
-  mutating func clearMinLen() {self._minLen = nil}
+  public mutating func clearMinLen() {self._minLen = nil}
 
   /// MaxLen specifies that this field must be the specified number of bytes
   /// at a maximum
-  var maxLen: UInt64 {
+  public var maxLen: UInt64 {
     get {return _maxLen ?? 0}
     set {_maxLen = newValue}
   }
   /// Returns true if `maxLen` has been explicitly set.
-  var hasMaxLen: Bool {return self._maxLen != nil}
+  public var hasMaxLen: Bool {return self._maxLen != nil}
   /// Clears the value of `maxLen`. Subsequent reads from it will return its default value.
-  mutating func clearMaxLen() {self._maxLen = nil}
+  public mutating func clearMaxLen() {self._maxLen = nil}
 
   /// Pattern specifes that this field must match against the specified
   /// regular expression (RE2 syntax). The included expression should elide
   /// any delimiters.
-  var pattern: String {
+  public var pattern: String {
     get {return _pattern ?? String()}
     set {_pattern = newValue}
   }
   /// Returns true if `pattern` has been explicitly set.
-  var hasPattern: Bool {return self._pattern != nil}
+  public var hasPattern: Bool {return self._pattern != nil}
   /// Clears the value of `pattern`. Subsequent reads from it will return its default value.
-  mutating func clearPattern() {self._pattern = nil}
+  public mutating func clearPattern() {self._pattern = nil}
 
   /// Prefix specifies that this field must have the specified bytes at the
   /// beginning of the string.
-  var prefix: Data {
+  public var prefix: Data {
     get {return _prefix ?? Data()}
     set {_prefix = newValue}
   }
   /// Returns true if `prefix` has been explicitly set.
-  var hasPrefix: Bool {return self._prefix != nil}
+  public var hasPrefix: Bool {return self._prefix != nil}
   /// Clears the value of `prefix`. Subsequent reads from it will return its default value.
-  mutating func clearPrefix() {self._prefix = nil}
+  public mutating func clearPrefix() {self._prefix = nil}
 
   /// Suffix specifies that this field must have the specified bytes at the
   /// end of the string.
-  var suffix: Data {
+  public var suffix: Data {
     get {return _suffix ?? Data()}
     set {_suffix = newValue}
   }
   /// Returns true if `suffix` has been explicitly set.
-  var hasSuffix: Bool {return self._suffix != nil}
+  public var hasSuffix: Bool {return self._suffix != nil}
   /// Clears the value of `suffix`. Subsequent reads from it will return its default value.
-  mutating func clearSuffix() {self._suffix = nil}
+  public mutating func clearSuffix() {self._suffix = nil}
 
   /// Contains specifies that this field must have the specified bytes
   /// anywhere in the string.
-  var contains: Data {
+  public var contains: Data {
     get {return _contains ?? Data()}
     set {_contains = newValue}
   }
   /// Returns true if `contains` has been explicitly set.
-  var hasContains: Bool {return self._contains != nil}
+  public var hasContains: Bool {return self._contains != nil}
   /// Clears the value of `contains`. Subsequent reads from it will return its default value.
-  mutating func clearContains() {self._contains = nil}
+  public mutating func clearContains() {self._contains = nil}
 
   /// In specifies that this field must be equal to one of the specified
   /// values
-  var `in`: [Data] = []
+  public var `in`: [Data] = []
 
   /// NotIn specifies that this field cannot be equal to one of the specified
   /// values
-  var notIn: [Data] = []
+  public var notIn: [Data] = []
 
   /// WellKnown rules provide advanced constraints against common byte
   /// patterns
-  var wellKnown: Validate_BytesRules.OneOf_WellKnown? = nil
+  public var wellKnown: Validate_BytesRules.OneOf_WellKnown? = nil
 
   /// Ip specifies that the field must be a valid IP (v4 or v6) address in
   /// byte format
-  var ip: Bool {
+  public var ip: Bool {
     get {
       if case .ip(let v)? = wellKnown {return v}
       return false
@@ -2019,7 +2019,7 @@ struct Validate_BytesRules {
 
   /// Ipv4 specifies that the field must be a valid IPv4 address in byte
   /// format
-  var ipv4: Bool {
+  public var ipv4: Bool {
     get {
       if case .ipv4(let v)? = wellKnown {return v}
       return false
@@ -2029,7 +2029,7 @@ struct Validate_BytesRules {
 
   /// Ipv6 specifies that the field must be a valid IPv6 address in byte
   /// format
-  var ipv6: Bool {
+  public var ipv6: Bool {
     get {
       if case .ipv6(let v)? = wellKnown {return v}
       return false
@@ -2039,20 +2039,20 @@ struct Validate_BytesRules {
 
   /// IgnoreEmpty specifies that the validation rules of this field should be
   /// evaluated only if the field is not empty
-  var ignoreEmpty: Bool {
+  public var ignoreEmpty: Bool {
     get {return _ignoreEmpty ?? false}
     set {_ignoreEmpty = newValue}
   }
   /// Returns true if `ignoreEmpty` has been explicitly set.
-  var hasIgnoreEmpty: Bool {return self._ignoreEmpty != nil}
+  public var hasIgnoreEmpty: Bool {return self._ignoreEmpty != nil}
   /// Clears the value of `ignoreEmpty`. Subsequent reads from it will return its default value.
-  mutating func clearIgnoreEmpty() {self._ignoreEmpty = nil}
+  public mutating func clearIgnoreEmpty() {self._ignoreEmpty = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   /// WellKnown rules provide advanced constraints against common byte
   /// patterns
-  enum OneOf_WellKnown: Equatable {
+  public enum OneOf_WellKnown: Equatable {
     /// Ip specifies that the field must be a valid IP (v4 or v6) address in
     /// byte format
     case ip(Bool)
@@ -2064,7 +2064,7 @@ struct Validate_BytesRules {
     case ipv6(Bool)
 
   #if !swift(>=4.1)
-    static func ==(lhs: Validate_BytesRules.OneOf_WellKnown, rhs: Validate_BytesRules.OneOf_WellKnown) -> Bool {
+    public static func ==(lhs: Validate_BytesRules.OneOf_WellKnown, rhs: Validate_BytesRules.OneOf_WellKnown) -> Bool {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
@@ -2087,7 +2087,7 @@ struct Validate_BytesRules {
   #endif
   }
 
-  init() {}
+  public init() {}
 
   fileprivate var _const: Data? = nil
   fileprivate var _len: UInt64? = nil
@@ -2101,43 +2101,43 @@ struct Validate_BytesRules {
 }
 
 /// EnumRules describe the constraints applied to enum values
-struct Validate_EnumRules {
+public struct Validate_EnumRules {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// Const specifies that this field must be exactly the specified value
-  var const: Int32 {
+  public var const: Int32 {
     get {return _const ?? 0}
     set {_const = newValue}
   }
   /// Returns true if `const` has been explicitly set.
-  var hasConst: Bool {return self._const != nil}
+  public var hasConst: Bool {return self._const != nil}
   /// Clears the value of `const`. Subsequent reads from it will return its default value.
-  mutating func clearConst() {self._const = nil}
+  public mutating func clearConst() {self._const = nil}
 
   /// DefinedOnly specifies that this field must be only one of the defined
   /// values for this enum, failing on any undefined value.
-  var definedOnly: Bool {
+  public var definedOnly: Bool {
     get {return _definedOnly ?? false}
     set {_definedOnly = newValue}
   }
   /// Returns true if `definedOnly` has been explicitly set.
-  var hasDefinedOnly: Bool {return self._definedOnly != nil}
+  public var hasDefinedOnly: Bool {return self._definedOnly != nil}
   /// Clears the value of `definedOnly`. Subsequent reads from it will return its default value.
-  mutating func clearDefinedOnly() {self._definedOnly = nil}
+  public mutating func clearDefinedOnly() {self._definedOnly = nil}
 
   /// In specifies that this field must be equal to one of the specified
   /// values
-  var `in`: [Int32] = []
+  public var `in`: [Int32] = []
 
   /// NotIn specifies that this field cannot be equal to one of the specified
   /// values
-  var notIn: [Int32] = []
+  public var notIn: [Int32] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _const: Int32? = nil
   fileprivate var _definedOnly: Bool? = nil
@@ -2145,303 +2145,303 @@ struct Validate_EnumRules {
 
 /// MessageRules describe the constraints applied to embedded message values.
 /// For message-type fields, validation is performed recursively.
-struct Validate_MessageRules {
+public struct Validate_MessageRules {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// Skip specifies that the validation rules of this field should not be
   /// evaluated
-  var skip: Bool {
+  public var skip: Bool {
     get {return _skip ?? false}
     set {_skip = newValue}
   }
   /// Returns true if `skip` has been explicitly set.
-  var hasSkip: Bool {return self._skip != nil}
+  public var hasSkip: Bool {return self._skip != nil}
   /// Clears the value of `skip`. Subsequent reads from it will return its default value.
-  mutating func clearSkip() {self._skip = nil}
+  public mutating func clearSkip() {self._skip = nil}
 
   /// Required specifies that this field must be set
-  var required: Bool {
+  public var required: Bool {
     get {return _required ?? false}
     set {_required = newValue}
   }
   /// Returns true if `required` has been explicitly set.
-  var hasRequired: Bool {return self._required != nil}
+  public var hasRequired: Bool {return self._required != nil}
   /// Clears the value of `required`. Subsequent reads from it will return its default value.
-  mutating func clearRequired() {self._required = nil}
+  public mutating func clearRequired() {self._required = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _skip: Bool? = nil
   fileprivate var _required: Bool? = nil
 }
 
 /// RepeatedRules describe the constraints applied to `repeated` values
-struct Validate_RepeatedRules {
+public struct Validate_RepeatedRules {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// MinItems specifies that this field must have the specified number of
   /// items at a minimum
-  var minItems: UInt64 {
+  public var minItems: UInt64 {
     get {return _storage._minItems ?? 0}
     set {_uniqueStorage()._minItems = newValue}
   }
   /// Returns true if `minItems` has been explicitly set.
-  var hasMinItems: Bool {return _storage._minItems != nil}
+  public var hasMinItems: Bool {return _storage._minItems != nil}
   /// Clears the value of `minItems`. Subsequent reads from it will return its default value.
-  mutating func clearMinItems() {_uniqueStorage()._minItems = nil}
+  public mutating func clearMinItems() {_uniqueStorage()._minItems = nil}
 
   /// MaxItems specifies that this field must have the specified number of
   /// items at a maximum
-  var maxItems: UInt64 {
+  public var maxItems: UInt64 {
     get {return _storage._maxItems ?? 0}
     set {_uniqueStorage()._maxItems = newValue}
   }
   /// Returns true if `maxItems` has been explicitly set.
-  var hasMaxItems: Bool {return _storage._maxItems != nil}
+  public var hasMaxItems: Bool {return _storage._maxItems != nil}
   /// Clears the value of `maxItems`. Subsequent reads from it will return its default value.
-  mutating func clearMaxItems() {_uniqueStorage()._maxItems = nil}
+  public mutating func clearMaxItems() {_uniqueStorage()._maxItems = nil}
 
   /// Unique specifies that all elements in this field must be unique. This
   /// contraint is only applicable to scalar and enum types (messages are not
   /// supported).
-  var unique: Bool {
+  public var unique: Bool {
     get {return _storage._unique ?? false}
     set {_uniqueStorage()._unique = newValue}
   }
   /// Returns true if `unique` has been explicitly set.
-  var hasUnique: Bool {return _storage._unique != nil}
+  public var hasUnique: Bool {return _storage._unique != nil}
   /// Clears the value of `unique`. Subsequent reads from it will return its default value.
-  mutating func clearUnique() {_uniqueStorage()._unique = nil}
+  public mutating func clearUnique() {_uniqueStorage()._unique = nil}
 
   /// Items specifies the contraints to be applied to each item in the field.
   /// Repeated message fields will still execute validation against each item
   /// unless skip is specified here.
-  var items: Validate_FieldRules {
+  public var items: Validate_FieldRules {
     get {return _storage._items ?? Validate_FieldRules()}
     set {_uniqueStorage()._items = newValue}
   }
   /// Returns true if `items` has been explicitly set.
-  var hasItems: Bool {return _storage._items != nil}
+  public var hasItems: Bool {return _storage._items != nil}
   /// Clears the value of `items`. Subsequent reads from it will return its default value.
-  mutating func clearItems() {_uniqueStorage()._items = nil}
+  public mutating func clearItems() {_uniqueStorage()._items = nil}
 
   /// IgnoreEmpty specifies that the validation rules of this field should be
   /// evaluated only if the field is not empty
-  var ignoreEmpty: Bool {
+  public var ignoreEmpty: Bool {
     get {return _storage._ignoreEmpty ?? false}
     set {_uniqueStorage()._ignoreEmpty = newValue}
   }
   /// Returns true if `ignoreEmpty` has been explicitly set.
-  var hasIgnoreEmpty: Bool {return _storage._ignoreEmpty != nil}
+  public var hasIgnoreEmpty: Bool {return _storage._ignoreEmpty != nil}
   /// Clears the value of `ignoreEmpty`. Subsequent reads from it will return its default value.
-  mutating func clearIgnoreEmpty() {_uniqueStorage()._ignoreEmpty = nil}
+  public mutating func clearIgnoreEmpty() {_uniqueStorage()._ignoreEmpty = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
 /// MapRules describe the constraints applied to `map` values
-struct Validate_MapRules {
+public struct Validate_MapRules {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// MinPairs specifies that this field must have the specified number of
   /// KVs at a minimum
-  var minPairs: UInt64 {
+  public var minPairs: UInt64 {
     get {return _storage._minPairs ?? 0}
     set {_uniqueStorage()._minPairs = newValue}
   }
   /// Returns true if `minPairs` has been explicitly set.
-  var hasMinPairs: Bool {return _storage._minPairs != nil}
+  public var hasMinPairs: Bool {return _storage._minPairs != nil}
   /// Clears the value of `minPairs`. Subsequent reads from it will return its default value.
-  mutating func clearMinPairs() {_uniqueStorage()._minPairs = nil}
+  public mutating func clearMinPairs() {_uniqueStorage()._minPairs = nil}
 
   /// MaxPairs specifies that this field must have the specified number of
   /// KVs at a maximum
-  var maxPairs: UInt64 {
+  public var maxPairs: UInt64 {
     get {return _storage._maxPairs ?? 0}
     set {_uniqueStorage()._maxPairs = newValue}
   }
   /// Returns true if `maxPairs` has been explicitly set.
-  var hasMaxPairs: Bool {return _storage._maxPairs != nil}
+  public var hasMaxPairs: Bool {return _storage._maxPairs != nil}
   /// Clears the value of `maxPairs`. Subsequent reads from it will return its default value.
-  mutating func clearMaxPairs() {_uniqueStorage()._maxPairs = nil}
+  public mutating func clearMaxPairs() {_uniqueStorage()._maxPairs = nil}
 
   /// NoSparse specifies values in this field cannot be unset. This only
   /// applies to map's with message value types.
-  var noSparse: Bool {
+  public var noSparse: Bool {
     get {return _storage._noSparse ?? false}
     set {_uniqueStorage()._noSparse = newValue}
   }
   /// Returns true if `noSparse` has been explicitly set.
-  var hasNoSparse: Bool {return _storage._noSparse != nil}
+  public var hasNoSparse: Bool {return _storage._noSparse != nil}
   /// Clears the value of `noSparse`. Subsequent reads from it will return its default value.
-  mutating func clearNoSparse() {_uniqueStorage()._noSparse = nil}
+  public mutating func clearNoSparse() {_uniqueStorage()._noSparse = nil}
 
   /// Keys specifies the constraints to be applied to each key in the field.
-  var keys: Validate_FieldRules {
+  public var keys: Validate_FieldRules {
     get {return _storage._keys ?? Validate_FieldRules()}
     set {_uniqueStorage()._keys = newValue}
   }
   /// Returns true if `keys` has been explicitly set.
-  var hasKeys: Bool {return _storage._keys != nil}
+  public var hasKeys: Bool {return _storage._keys != nil}
   /// Clears the value of `keys`. Subsequent reads from it will return its default value.
-  mutating func clearKeys() {_uniqueStorage()._keys = nil}
+  public mutating func clearKeys() {_uniqueStorage()._keys = nil}
 
   /// Values specifies the constraints to be applied to the value of each key
   /// in the field. Message values will still have their validations evaluated
   /// unless skip is specified here.
-  var values: Validate_FieldRules {
+  public var values: Validate_FieldRules {
     get {return _storage._values ?? Validate_FieldRules()}
     set {_uniqueStorage()._values = newValue}
   }
   /// Returns true if `values` has been explicitly set.
-  var hasValues: Bool {return _storage._values != nil}
+  public var hasValues: Bool {return _storage._values != nil}
   /// Clears the value of `values`. Subsequent reads from it will return its default value.
-  mutating func clearValues() {_uniqueStorage()._values = nil}
+  public mutating func clearValues() {_uniqueStorage()._values = nil}
 
   /// IgnoreEmpty specifies that the validation rules of this field should be
   /// evaluated only if the field is not empty
-  var ignoreEmpty: Bool {
+  public var ignoreEmpty: Bool {
     get {return _storage._ignoreEmpty ?? false}
     set {_uniqueStorage()._ignoreEmpty = newValue}
   }
   /// Returns true if `ignoreEmpty` has been explicitly set.
-  var hasIgnoreEmpty: Bool {return _storage._ignoreEmpty != nil}
+  public var hasIgnoreEmpty: Bool {return _storage._ignoreEmpty != nil}
   /// Clears the value of `ignoreEmpty`. Subsequent reads from it will return its default value.
-  mutating func clearIgnoreEmpty() {_uniqueStorage()._ignoreEmpty = nil}
+  public mutating func clearIgnoreEmpty() {_uniqueStorage()._ignoreEmpty = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
 /// AnyRules describe constraints applied exclusively to the
 /// `google.protobuf.Any` well-known type
-struct Validate_AnyRules {
+public struct Validate_AnyRules {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// Required specifies that this field must be set
-  var required: Bool {
+  public var required: Bool {
     get {return _required ?? false}
     set {_required = newValue}
   }
   /// Returns true if `required` has been explicitly set.
-  var hasRequired: Bool {return self._required != nil}
+  public var hasRequired: Bool {return self._required != nil}
   /// Clears the value of `required`. Subsequent reads from it will return its default value.
-  mutating func clearRequired() {self._required = nil}
+  public mutating func clearRequired() {self._required = nil}
 
   /// In specifies that this field's `type_url` must be equal to one of the
   /// specified values.
-  var `in`: [String] = []
+  public var `in`: [String] = []
 
   /// NotIn specifies that this field's `type_url` must not be equal to any of
   /// the specified values.
-  var notIn: [String] = []
+  public var notIn: [String] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _required: Bool? = nil
 }
 
 /// DurationRules describe the constraints applied exclusively to the
 /// `google.protobuf.Duration` well-known type
-struct Validate_DurationRules {
+public struct Validate_DurationRules {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// Required specifies that this field must be set
-  var required: Bool {
+  public var required: Bool {
     get {return _required ?? false}
     set {_required = newValue}
   }
   /// Returns true if `required` has been explicitly set.
-  var hasRequired: Bool {return self._required != nil}
+  public var hasRequired: Bool {return self._required != nil}
   /// Clears the value of `required`. Subsequent reads from it will return its default value.
-  mutating func clearRequired() {self._required = nil}
+  public mutating func clearRequired() {self._required = nil}
 
   /// Const specifies that this field must be exactly the specified value
-  var const: SwiftProtobuf.Google_Protobuf_Duration {
+  public var const: SwiftProtobuf.Google_Protobuf_Duration {
     get {return _const ?? SwiftProtobuf.Google_Protobuf_Duration()}
     set {_const = newValue}
   }
   /// Returns true if `const` has been explicitly set.
-  var hasConst: Bool {return self._const != nil}
+  public var hasConst: Bool {return self._const != nil}
   /// Clears the value of `const`. Subsequent reads from it will return its default value.
-  mutating func clearConst() {self._const = nil}
+  public mutating func clearConst() {self._const = nil}
 
   /// Lt specifies that this field must be less than the specified value,
   /// exclusive
-  var lt: SwiftProtobuf.Google_Protobuf_Duration {
+  public var lt: SwiftProtobuf.Google_Protobuf_Duration {
     get {return _lt ?? SwiftProtobuf.Google_Protobuf_Duration()}
     set {_lt = newValue}
   }
   /// Returns true if `lt` has been explicitly set.
-  var hasLt: Bool {return self._lt != nil}
+  public var hasLt: Bool {return self._lt != nil}
   /// Clears the value of `lt`. Subsequent reads from it will return its default value.
-  mutating func clearLt() {self._lt = nil}
+  public mutating func clearLt() {self._lt = nil}
 
   /// Lt specifies that this field must be less than the specified value,
   /// inclusive
-  var lte: SwiftProtobuf.Google_Protobuf_Duration {
+  public var lte: SwiftProtobuf.Google_Protobuf_Duration {
     get {return _lte ?? SwiftProtobuf.Google_Protobuf_Duration()}
     set {_lte = newValue}
   }
   /// Returns true if `lte` has been explicitly set.
-  var hasLte: Bool {return self._lte != nil}
+  public var hasLte: Bool {return self._lte != nil}
   /// Clears the value of `lte`. Subsequent reads from it will return its default value.
-  mutating func clearLte() {self._lte = nil}
+  public mutating func clearLte() {self._lte = nil}
 
   /// Gt specifies that this field must be greater than the specified value,
   /// exclusive
-  var gt: SwiftProtobuf.Google_Protobuf_Duration {
+  public var gt: SwiftProtobuf.Google_Protobuf_Duration {
     get {return _gt ?? SwiftProtobuf.Google_Protobuf_Duration()}
     set {_gt = newValue}
   }
   /// Returns true if `gt` has been explicitly set.
-  var hasGt: Bool {return self._gt != nil}
+  public var hasGt: Bool {return self._gt != nil}
   /// Clears the value of `gt`. Subsequent reads from it will return its default value.
-  mutating func clearGt() {self._gt = nil}
+  public mutating func clearGt() {self._gt = nil}
 
   /// Gte specifies that this field must be greater than the specified value,
   /// inclusive
-  var gte: SwiftProtobuf.Google_Protobuf_Duration {
+  public var gte: SwiftProtobuf.Google_Protobuf_Duration {
     get {return _gte ?? SwiftProtobuf.Google_Protobuf_Duration()}
     set {_gte = newValue}
   }
   /// Returns true if `gte` has been explicitly set.
-  var hasGte: Bool {return self._gte != nil}
+  public var hasGte: Bool {return self._gte != nil}
   /// Clears the value of `gte`. Subsequent reads from it will return its default value.
-  mutating func clearGte() {self._gte = nil}
+  public mutating func clearGte() {self._gte = nil}
 
   /// In specifies that this field must be equal to one of the specified
   /// values
-  var `in`: [SwiftProtobuf.Google_Protobuf_Duration] = []
+  public var `in`: [SwiftProtobuf.Google_Protobuf_Duration] = []
 
   /// NotIn specifies that this field cannot be equal to one of the specified
   /// values
-  var notIn: [SwiftProtobuf.Google_Protobuf_Duration] = []
+  public var notIn: [SwiftProtobuf.Google_Protobuf_Duration] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _required: Bool? = nil
   fileprivate var _const: SwiftProtobuf.Google_Protobuf_Duration? = nil
@@ -2453,112 +2453,112 @@ struct Validate_DurationRules {
 
 /// TimestampRules describe the constraints applied exclusively to the
 /// `google.protobuf.Timestamp` well-known type
-struct Validate_TimestampRules {
+public struct Validate_TimestampRules {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// Required specifies that this field must be set
-  var required: Bool {
+  public var required: Bool {
     get {return _required ?? false}
     set {_required = newValue}
   }
   /// Returns true if `required` has been explicitly set.
-  var hasRequired: Bool {return self._required != nil}
+  public var hasRequired: Bool {return self._required != nil}
   /// Clears the value of `required`. Subsequent reads from it will return its default value.
-  mutating func clearRequired() {self._required = nil}
+  public mutating func clearRequired() {self._required = nil}
 
   /// Const specifies that this field must be exactly the specified value
-  var const: SwiftProtobuf.Google_Protobuf_Timestamp {
+  public var const: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _const ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_const = newValue}
   }
   /// Returns true if `const` has been explicitly set.
-  var hasConst: Bool {return self._const != nil}
+  public var hasConst: Bool {return self._const != nil}
   /// Clears the value of `const`. Subsequent reads from it will return its default value.
-  mutating func clearConst() {self._const = nil}
+  public mutating func clearConst() {self._const = nil}
 
   /// Lt specifies that this field must be less than the specified value,
   /// exclusive
-  var lt: SwiftProtobuf.Google_Protobuf_Timestamp {
+  public var lt: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _lt ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_lt = newValue}
   }
   /// Returns true if `lt` has been explicitly set.
-  var hasLt: Bool {return self._lt != nil}
+  public var hasLt: Bool {return self._lt != nil}
   /// Clears the value of `lt`. Subsequent reads from it will return its default value.
-  mutating func clearLt() {self._lt = nil}
+  public mutating func clearLt() {self._lt = nil}
 
   /// Lte specifies that this field must be less than the specified value,
   /// inclusive
-  var lte: SwiftProtobuf.Google_Protobuf_Timestamp {
+  public var lte: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _lte ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_lte = newValue}
   }
   /// Returns true if `lte` has been explicitly set.
-  var hasLte: Bool {return self._lte != nil}
+  public var hasLte: Bool {return self._lte != nil}
   /// Clears the value of `lte`. Subsequent reads from it will return its default value.
-  mutating func clearLte() {self._lte = nil}
+  public mutating func clearLte() {self._lte = nil}
 
   /// Gt specifies that this field must be greater than the specified value,
   /// exclusive
-  var gt: SwiftProtobuf.Google_Protobuf_Timestamp {
+  public var gt: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _gt ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_gt = newValue}
   }
   /// Returns true if `gt` has been explicitly set.
-  var hasGt: Bool {return self._gt != nil}
+  public var hasGt: Bool {return self._gt != nil}
   /// Clears the value of `gt`. Subsequent reads from it will return its default value.
-  mutating func clearGt() {self._gt = nil}
+  public mutating func clearGt() {self._gt = nil}
 
   /// Gte specifies that this field must be greater than the specified value,
   /// inclusive
-  var gte: SwiftProtobuf.Google_Protobuf_Timestamp {
+  public var gte: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _gte ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_gte = newValue}
   }
   /// Returns true if `gte` has been explicitly set.
-  var hasGte: Bool {return self._gte != nil}
+  public var hasGte: Bool {return self._gte != nil}
   /// Clears the value of `gte`. Subsequent reads from it will return its default value.
-  mutating func clearGte() {self._gte = nil}
+  public mutating func clearGte() {self._gte = nil}
 
   /// LtNow specifies that this must be less than the current time. LtNow
   /// can only be used with the Within rule.
-  var ltNow: Bool {
+  public var ltNow: Bool {
     get {return _ltNow ?? false}
     set {_ltNow = newValue}
   }
   /// Returns true if `ltNow` has been explicitly set.
-  var hasLtNow: Bool {return self._ltNow != nil}
+  public var hasLtNow: Bool {return self._ltNow != nil}
   /// Clears the value of `ltNow`. Subsequent reads from it will return its default value.
-  mutating func clearLtNow() {self._ltNow = nil}
+  public mutating func clearLtNow() {self._ltNow = nil}
 
   /// GtNow specifies that this must be greater than the current time. GtNow
   /// can only be used with the Within rule.
-  var gtNow: Bool {
+  public var gtNow: Bool {
     get {return _gtNow ?? false}
     set {_gtNow = newValue}
   }
   /// Returns true if `gtNow` has been explicitly set.
-  var hasGtNow: Bool {return self._gtNow != nil}
+  public var hasGtNow: Bool {return self._gtNow != nil}
   /// Clears the value of `gtNow`. Subsequent reads from it will return its default value.
-  mutating func clearGtNow() {self._gtNow = nil}
+  public mutating func clearGtNow() {self._gtNow = nil}
 
   /// Within specifies that this field must be within this duration of the
   /// current time. This constraint can be used alone or with the LtNow and
   /// GtNow rules.
-  var within: SwiftProtobuf.Google_Protobuf_Duration {
+  public var within: SwiftProtobuf.Google_Protobuf_Duration {
     get {return _within ?? SwiftProtobuf.Google_Protobuf_Duration()}
     set {_within = newValue}
   }
   /// Returns true if `within` has been explicitly set.
-  var hasWithin: Bool {return self._within != nil}
+  public var hasWithin: Bool {return self._within != nil}
   /// Clears the value of `within`. Subsequent reads from it will return its default value.
-  mutating func clearWithin() {self._within = nil}
+  public mutating func clearWithin() {self._within = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _required: Bool? = nil
   fileprivate var _const: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
@@ -2584,18 +2584,18 @@ extension SwiftProtobuf.Google_Protobuf_FieldOptions {
 
   /// Rules specify the validations to be performed on this field. By default,
   /// no validation is performed against a field.
-  var Validate_rules: Validate_FieldRules {
+  public var Validate_rules: Validate_FieldRules {
     get {return getExtensionValue(ext: Validate_Extensions_rules) ?? Validate_FieldRules()}
     set {setExtensionValue(ext: Validate_Extensions_rules, value: newValue)}
   }
   /// Returns true if extension `Validate_Extensions_rules`
   /// has been explicitly set.
-  var hasValidate_rules: Bool {
+  public var hasValidate_rules: Bool {
     return hasExtensionValue(ext: Validate_Extensions_rules)
   }
   /// Clears the value of extension `Validate_Extensions_rules`.
   /// Subsequent reads from it will return its default value.
-  mutating func clearValidate_rules() {
+  public mutating func clearValidate_rules() {
     clearExtensionValue(ext: Validate_Extensions_rules)
   }
 }
@@ -2604,34 +2604,34 @@ extension SwiftProtobuf.Google_Protobuf_MessageOptions {
 
   /// Disabled nullifies any validation rules for this message, including any
   /// message fields associated with it that do support validation.
-  var Validate_disabled: Bool {
+  public var Validate_disabled: Bool {
     get {return getExtensionValue(ext: Validate_Extensions_disabled) ?? false}
     set {setExtensionValue(ext: Validate_Extensions_disabled, value: newValue)}
   }
   /// Returns true if extension `Validate_Extensions_disabled`
   /// has been explicitly set.
-  var hasValidate_disabled: Bool {
+  public var hasValidate_disabled: Bool {
     return hasExtensionValue(ext: Validate_Extensions_disabled)
   }
   /// Clears the value of extension `Validate_Extensions_disabled`.
   /// Subsequent reads from it will return its default value.
-  mutating func clearValidate_disabled() {
+  public mutating func clearValidate_disabled() {
     clearExtensionValue(ext: Validate_Extensions_disabled)
   }
 
   /// Ignore skips generation of validation methods for this message.
-  var Validate_ignored: Bool {
+  public var Validate_ignored: Bool {
     get {return getExtensionValue(ext: Validate_Extensions_ignored) ?? false}
     set {setExtensionValue(ext: Validate_Extensions_ignored, value: newValue)}
   }
   /// Returns true if extension `Validate_Extensions_ignored`
   /// has been explicitly set.
-  var hasValidate_ignored: Bool {
+  public var hasValidate_ignored: Bool {
     return hasExtensionValue(ext: Validate_Extensions_ignored)
   }
   /// Clears the value of extension `Validate_Extensions_ignored`.
   /// Subsequent reads from it will return its default value.
-  mutating func clearValidate_ignored() {
+  public mutating func clearValidate_ignored() {
     clearExtensionValue(ext: Validate_Extensions_ignored)
   }
 }
@@ -2640,18 +2640,18 @@ extension SwiftProtobuf.Google_Protobuf_OneofOptions {
 
   /// Required ensures that exactly one the field options in a oneof is set;
   /// validation fails if no fields in the oneof are set.
-  var Validate_required: Bool {
+  public var Validate_required: Bool {
     get {return getExtensionValue(ext: Validate_Extensions_required) ?? false}
     set {setExtensionValue(ext: Validate_Extensions_required, value: newValue)}
   }
   /// Returns true if extension `Validate_Extensions_required`
   /// has been explicitly set.
-  var hasValidate_required: Bool {
+  public var hasValidate_required: Bool {
     return hasExtensionValue(ext: Validate_Extensions_required)
   }
   /// Clears the value of extension `Validate_Extensions_required`.
   /// Subsequent reads from it will return its default value.
-  mutating func clearValidate_required() {
+  public mutating func clearValidate_required() {
     clearExtensionValue(ext: Validate_Extensions_required)
   }
 
@@ -2663,7 +2663,7 @@ extension SwiftProtobuf.Google_Protobuf_OneofOptions {
 /// this .proto file. It can be used any place an `SwiftProtobuf.ExtensionMap` is needed
 /// in parsing, or it can be combined with other `SwiftProtobuf.SimpleExtensionMap`s to create
 /// a larger `SwiftProtobuf.SimpleExtensionMap`.
-let Validate_Validate_Extensions: SwiftProtobuf.SimpleExtensionMap = [
+public let Validate_Validate_Extensions: SwiftProtobuf.SimpleExtensionMap = [
   Validate_Extensions_disabled,
   Validate_Extensions_ignored,
   Validate_Extensions_required,
@@ -2676,27 +2676,27 @@ let Validate_Validate_Extensions: SwiftProtobuf.SimpleExtensionMap = [
 
 /// Disabled nullifies any validation rules for this message, including any
 /// message fields associated with it that do support validation.
-let Validate_Extensions_disabled = SwiftProtobuf.MessageExtension<SwiftProtobuf.OptionalExtensionField<SwiftProtobuf.ProtobufBool>, SwiftProtobuf.Google_Protobuf_MessageOptions>(
+public let Validate_Extensions_disabled = SwiftProtobuf.MessageExtension<SwiftProtobuf.OptionalExtensionField<SwiftProtobuf.ProtobufBool>, SwiftProtobuf.Google_Protobuf_MessageOptions>(
   _protobuf_fieldNumber: 1071,
   fieldName: "validate.disabled"
 )
 
 /// Ignore skips generation of validation methods for this message.
-let Validate_Extensions_ignored = SwiftProtobuf.MessageExtension<SwiftProtobuf.OptionalExtensionField<SwiftProtobuf.ProtobufBool>, SwiftProtobuf.Google_Protobuf_MessageOptions>(
+public let Validate_Extensions_ignored = SwiftProtobuf.MessageExtension<SwiftProtobuf.OptionalExtensionField<SwiftProtobuf.ProtobufBool>, SwiftProtobuf.Google_Protobuf_MessageOptions>(
   _protobuf_fieldNumber: 1072,
   fieldName: "validate.ignored"
 )
 
 /// Required ensures that exactly one the field options in a oneof is set;
 /// validation fails if no fields in the oneof are set.
-let Validate_Extensions_required = SwiftProtobuf.MessageExtension<SwiftProtobuf.OptionalExtensionField<SwiftProtobuf.ProtobufBool>, SwiftProtobuf.Google_Protobuf_OneofOptions>(
+public let Validate_Extensions_required = SwiftProtobuf.MessageExtension<SwiftProtobuf.OptionalExtensionField<SwiftProtobuf.ProtobufBool>, SwiftProtobuf.Google_Protobuf_OneofOptions>(
   _protobuf_fieldNumber: 1071,
   fieldName: "validate.required"
 )
 
 /// Rules specify the validations to be performed on this field. By default,
 /// no validation is performed against a field.
-let Validate_Extensions_rules = SwiftProtobuf.MessageExtension<SwiftProtobuf.OptionalMessageExtensionField<Validate_FieldRules>, SwiftProtobuf.Google_Protobuf_FieldOptions>(
+public let Validate_Extensions_rules = SwiftProtobuf.MessageExtension<SwiftProtobuf.OptionalMessageExtensionField<Validate_FieldRules>, SwiftProtobuf.Google_Protobuf_FieldOptions>(
   _protobuf_fieldNumber: 1071,
   fieldName: "validate.rules"
 )
@@ -2706,7 +2706,7 @@ let Validate_Extensions_rules = SwiftProtobuf.MessageExtension<SwiftProtobuf.Opt
 fileprivate let _protobuf_package = "validate"
 
 extension Validate_KnownRegex: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "UNKNOWN"),
     1: .same(proto: "HTTP_HEADER_NAME"),
     2: .same(proto: "HTTP_HEADER_VALUE"),
@@ -2714,8 +2714,8 @@ extension Validate_KnownRegex: SwiftProtobuf._ProtoNameProviding {
 }
 
 extension Validate_FieldRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".FieldRules"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".FieldRules"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     17: .same(proto: "message"),
     1: .same(proto: "float"),
     2: .same(proto: "double"),
@@ -2761,7 +2761,7 @@ extension Validate_FieldRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImpl
     return _storage
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -3049,7 +3049,7 @@ extension Validate_FieldRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImpl
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -3154,7 +3154,7 @@ extension Validate_FieldRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImpl
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Validate_FieldRules, rhs: Validate_FieldRules) -> Bool {
+  public static func ==(lhs: Validate_FieldRules, rhs: Validate_FieldRules) -> Bool {
     if lhs._storage !== rhs._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -3171,8 +3171,8 @@ extension Validate_FieldRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImpl
 }
 
 extension Validate_FloatRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".FloatRules"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".FloatRules"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "const"),
     2: .same(proto: "lt"),
     3: .same(proto: "lte"),
@@ -3183,7 +3183,7 @@ extension Validate_FloatRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImpl
     8: .standard(proto: "ignore_empty"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -3202,7 +3202,7 @@ extension Validate_FloatRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImpl
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._const {
       try visitor.visitSingularFloatField(value: v, fieldNumber: 1)
     }
@@ -3230,7 +3230,7 @@ extension Validate_FloatRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImpl
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Validate_FloatRules, rhs: Validate_FloatRules) -> Bool {
+  public static func ==(lhs: Validate_FloatRules, rhs: Validate_FloatRules) -> Bool {
     if lhs._const != rhs._const {return false}
     if lhs._lt != rhs._lt {return false}
     if lhs._lte != rhs._lte {return false}
@@ -3245,8 +3245,8 @@ extension Validate_FloatRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImpl
 }
 
 extension Validate_DoubleRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".DoubleRules"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".DoubleRules"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "const"),
     2: .same(proto: "lt"),
     3: .same(proto: "lte"),
@@ -3257,7 +3257,7 @@ extension Validate_DoubleRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
     8: .standard(proto: "ignore_empty"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -3276,7 +3276,7 @@ extension Validate_DoubleRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._const {
       try visitor.visitSingularDoubleField(value: v, fieldNumber: 1)
     }
@@ -3304,7 +3304,7 @@ extension Validate_DoubleRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Validate_DoubleRules, rhs: Validate_DoubleRules) -> Bool {
+  public static func ==(lhs: Validate_DoubleRules, rhs: Validate_DoubleRules) -> Bool {
     if lhs._const != rhs._const {return false}
     if lhs._lt != rhs._lt {return false}
     if lhs._lte != rhs._lte {return false}
@@ -3319,8 +3319,8 @@ extension Validate_DoubleRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
 }
 
 extension Validate_Int32Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Int32Rules"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Int32Rules"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "const"),
     2: .same(proto: "lt"),
     3: .same(proto: "lte"),
@@ -3331,7 +3331,7 @@ extension Validate_Int32Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageImpl
     8: .standard(proto: "ignore_empty"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -3350,7 +3350,7 @@ extension Validate_Int32Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageImpl
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._const {
       try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
     }
@@ -3378,7 +3378,7 @@ extension Validate_Int32Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageImpl
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Validate_Int32Rules, rhs: Validate_Int32Rules) -> Bool {
+  public static func ==(lhs: Validate_Int32Rules, rhs: Validate_Int32Rules) -> Bool {
     if lhs._const != rhs._const {return false}
     if lhs._lt != rhs._lt {return false}
     if lhs._lte != rhs._lte {return false}
@@ -3393,8 +3393,8 @@ extension Validate_Int32Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageImpl
 }
 
 extension Validate_Int64Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Int64Rules"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Int64Rules"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "const"),
     2: .same(proto: "lt"),
     3: .same(proto: "lte"),
@@ -3405,7 +3405,7 @@ extension Validate_Int64Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageImpl
     8: .standard(proto: "ignore_empty"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -3424,7 +3424,7 @@ extension Validate_Int64Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageImpl
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._const {
       try visitor.visitSingularInt64Field(value: v, fieldNumber: 1)
     }
@@ -3452,7 +3452,7 @@ extension Validate_Int64Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageImpl
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Validate_Int64Rules, rhs: Validate_Int64Rules) -> Bool {
+  public static func ==(lhs: Validate_Int64Rules, rhs: Validate_Int64Rules) -> Bool {
     if lhs._const != rhs._const {return false}
     if lhs._lt != rhs._lt {return false}
     if lhs._lte != rhs._lte {return false}
@@ -3467,8 +3467,8 @@ extension Validate_Int64Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageImpl
 }
 
 extension Validate_UInt32Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".UInt32Rules"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".UInt32Rules"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "const"),
     2: .same(proto: "lt"),
     3: .same(proto: "lte"),
@@ -3479,7 +3479,7 @@ extension Validate_UInt32Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
     8: .standard(proto: "ignore_empty"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -3498,7 +3498,7 @@ extension Validate_UInt32Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._const {
       try visitor.visitSingularUInt32Field(value: v, fieldNumber: 1)
     }
@@ -3526,7 +3526,7 @@ extension Validate_UInt32Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Validate_UInt32Rules, rhs: Validate_UInt32Rules) -> Bool {
+  public static func ==(lhs: Validate_UInt32Rules, rhs: Validate_UInt32Rules) -> Bool {
     if lhs._const != rhs._const {return false}
     if lhs._lt != rhs._lt {return false}
     if lhs._lte != rhs._lte {return false}
@@ -3541,8 +3541,8 @@ extension Validate_UInt32Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
 }
 
 extension Validate_UInt64Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".UInt64Rules"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".UInt64Rules"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "const"),
     2: .same(proto: "lt"),
     3: .same(proto: "lte"),
@@ -3553,7 +3553,7 @@ extension Validate_UInt64Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
     8: .standard(proto: "ignore_empty"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -3572,7 +3572,7 @@ extension Validate_UInt64Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._const {
       try visitor.visitSingularUInt64Field(value: v, fieldNumber: 1)
     }
@@ -3600,7 +3600,7 @@ extension Validate_UInt64Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Validate_UInt64Rules, rhs: Validate_UInt64Rules) -> Bool {
+  public static func ==(lhs: Validate_UInt64Rules, rhs: Validate_UInt64Rules) -> Bool {
     if lhs._const != rhs._const {return false}
     if lhs._lt != rhs._lt {return false}
     if lhs._lte != rhs._lte {return false}
@@ -3615,8 +3615,8 @@ extension Validate_UInt64Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
 }
 
 extension Validate_SInt32Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".SInt32Rules"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".SInt32Rules"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "const"),
     2: .same(proto: "lt"),
     3: .same(proto: "lte"),
@@ -3627,7 +3627,7 @@ extension Validate_SInt32Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
     8: .standard(proto: "ignore_empty"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -3646,7 +3646,7 @@ extension Validate_SInt32Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._const {
       try visitor.visitSingularSInt32Field(value: v, fieldNumber: 1)
     }
@@ -3674,7 +3674,7 @@ extension Validate_SInt32Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Validate_SInt32Rules, rhs: Validate_SInt32Rules) -> Bool {
+  public static func ==(lhs: Validate_SInt32Rules, rhs: Validate_SInt32Rules) -> Bool {
     if lhs._const != rhs._const {return false}
     if lhs._lt != rhs._lt {return false}
     if lhs._lte != rhs._lte {return false}
@@ -3689,8 +3689,8 @@ extension Validate_SInt32Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
 }
 
 extension Validate_SInt64Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".SInt64Rules"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".SInt64Rules"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "const"),
     2: .same(proto: "lt"),
     3: .same(proto: "lte"),
@@ -3701,7 +3701,7 @@ extension Validate_SInt64Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
     8: .standard(proto: "ignore_empty"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -3720,7 +3720,7 @@ extension Validate_SInt64Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._const {
       try visitor.visitSingularSInt64Field(value: v, fieldNumber: 1)
     }
@@ -3748,7 +3748,7 @@ extension Validate_SInt64Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Validate_SInt64Rules, rhs: Validate_SInt64Rules) -> Bool {
+  public static func ==(lhs: Validate_SInt64Rules, rhs: Validate_SInt64Rules) -> Bool {
     if lhs._const != rhs._const {return false}
     if lhs._lt != rhs._lt {return false}
     if lhs._lte != rhs._lte {return false}
@@ -3763,8 +3763,8 @@ extension Validate_SInt64Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
 }
 
 extension Validate_Fixed32Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Fixed32Rules"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Fixed32Rules"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "const"),
     2: .same(proto: "lt"),
     3: .same(proto: "lte"),
@@ -3775,7 +3775,7 @@ extension Validate_Fixed32Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
     8: .standard(proto: "ignore_empty"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -3794,7 +3794,7 @@ extension Validate_Fixed32Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._const {
       try visitor.visitSingularFixed32Field(value: v, fieldNumber: 1)
     }
@@ -3822,7 +3822,7 @@ extension Validate_Fixed32Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Validate_Fixed32Rules, rhs: Validate_Fixed32Rules) -> Bool {
+  public static func ==(lhs: Validate_Fixed32Rules, rhs: Validate_Fixed32Rules) -> Bool {
     if lhs._const != rhs._const {return false}
     if lhs._lt != rhs._lt {return false}
     if lhs._lte != rhs._lte {return false}
@@ -3837,8 +3837,8 @@ extension Validate_Fixed32Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
 }
 
 extension Validate_Fixed64Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Fixed64Rules"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Fixed64Rules"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "const"),
     2: .same(proto: "lt"),
     3: .same(proto: "lte"),
@@ -3849,7 +3849,7 @@ extension Validate_Fixed64Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
     8: .standard(proto: "ignore_empty"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -3868,7 +3868,7 @@ extension Validate_Fixed64Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._const {
       try visitor.visitSingularFixed64Field(value: v, fieldNumber: 1)
     }
@@ -3896,7 +3896,7 @@ extension Validate_Fixed64Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Validate_Fixed64Rules, rhs: Validate_Fixed64Rules) -> Bool {
+  public static func ==(lhs: Validate_Fixed64Rules, rhs: Validate_Fixed64Rules) -> Bool {
     if lhs._const != rhs._const {return false}
     if lhs._lt != rhs._lt {return false}
     if lhs._lte != rhs._lte {return false}
@@ -3911,8 +3911,8 @@ extension Validate_Fixed64Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
 }
 
 extension Validate_SFixed32Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".SFixed32Rules"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".SFixed32Rules"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "const"),
     2: .same(proto: "lt"),
     3: .same(proto: "lte"),
@@ -3923,7 +3923,7 @@ extension Validate_SFixed32Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageI
     8: .standard(proto: "ignore_empty"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -3942,7 +3942,7 @@ extension Validate_SFixed32Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageI
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._const {
       try visitor.visitSingularSFixed32Field(value: v, fieldNumber: 1)
     }
@@ -3970,7 +3970,7 @@ extension Validate_SFixed32Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageI
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Validate_SFixed32Rules, rhs: Validate_SFixed32Rules) -> Bool {
+  public static func ==(lhs: Validate_SFixed32Rules, rhs: Validate_SFixed32Rules) -> Bool {
     if lhs._const != rhs._const {return false}
     if lhs._lt != rhs._lt {return false}
     if lhs._lte != rhs._lte {return false}
@@ -3985,8 +3985,8 @@ extension Validate_SFixed32Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageI
 }
 
 extension Validate_SFixed64Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".SFixed64Rules"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".SFixed64Rules"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "const"),
     2: .same(proto: "lt"),
     3: .same(proto: "lte"),
@@ -3997,7 +3997,7 @@ extension Validate_SFixed64Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageI
     8: .standard(proto: "ignore_empty"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -4016,7 +4016,7 @@ extension Validate_SFixed64Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageI
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._const {
       try visitor.visitSingularSFixed64Field(value: v, fieldNumber: 1)
     }
@@ -4044,7 +4044,7 @@ extension Validate_SFixed64Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageI
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Validate_SFixed64Rules, rhs: Validate_SFixed64Rules) -> Bool {
+  public static func ==(lhs: Validate_SFixed64Rules, rhs: Validate_SFixed64Rules) -> Bool {
     if lhs._const != rhs._const {return false}
     if lhs._lt != rhs._lt {return false}
     if lhs._lte != rhs._lte {return false}
@@ -4059,12 +4059,12 @@ extension Validate_SFixed64Rules: SwiftProtobuf.Message, SwiftProtobuf._MessageI
 }
 
 extension Validate_BoolRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".BoolRules"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".BoolRules"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "const"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -4076,14 +4076,14 @@ extension Validate_BoolRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImple
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._const {
       try visitor.visitSingularBoolField(value: v, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Validate_BoolRules, rhs: Validate_BoolRules) -> Bool {
+  public static func ==(lhs: Validate_BoolRules, rhs: Validate_BoolRules) -> Bool {
     if lhs._const != rhs._const {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -4091,8 +4091,8 @@ extension Validate_BoolRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImple
 }
 
 extension Validate_StringRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".StringRules"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".StringRules"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "const"),
     19: .same(proto: "len"),
     2: .standard(proto: "min_len"),
@@ -4172,7 +4172,7 @@ extension Validate_StringRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
     return _storage
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -4282,7 +4282,7 @@ extension Validate_StringRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._const {
         try visitor.visitSingularStringField(value: v, fieldNumber: 1)
@@ -4387,7 +4387,7 @@ extension Validate_StringRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Validate_StringRules, rhs: Validate_StringRules) -> Bool {
+  public static func ==(lhs: Validate_StringRules, rhs: Validate_StringRules) -> Bool {
     if lhs._storage !== rhs._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -4419,8 +4419,8 @@ extension Validate_StringRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
 }
 
 extension Validate_BytesRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".BytesRules"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".BytesRules"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "const"),
     13: .same(proto: "len"),
     2: .standard(proto: "min_len"),
@@ -4437,7 +4437,7 @@ extension Validate_BytesRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImpl
     14: .standard(proto: "ignore_empty"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -4483,7 +4483,7 @@ extension Validate_BytesRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImpl
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._const {
       try visitor.visitSingularBytesField(value: v, fieldNumber: 1)
     }
@@ -4538,7 +4538,7 @@ extension Validate_BytesRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImpl
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Validate_BytesRules, rhs: Validate_BytesRules) -> Bool {
+  public static func ==(lhs: Validate_BytesRules, rhs: Validate_BytesRules) -> Bool {
     if lhs._const != rhs._const {return false}
     if lhs._len != rhs._len {return false}
     if lhs._minLen != rhs._minLen {return false}
@@ -4557,15 +4557,15 @@ extension Validate_BytesRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImpl
 }
 
 extension Validate_EnumRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".EnumRules"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".EnumRules"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "const"),
     2: .standard(proto: "defined_only"),
     3: .same(proto: "in"),
     4: .standard(proto: "not_in"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -4580,7 +4580,7 @@ extension Validate_EnumRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImple
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._const {
       try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
     }
@@ -4596,7 +4596,7 @@ extension Validate_EnumRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImple
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Validate_EnumRules, rhs: Validate_EnumRules) -> Bool {
+  public static func ==(lhs: Validate_EnumRules, rhs: Validate_EnumRules) -> Bool {
     if lhs._const != rhs._const {return false}
     if lhs._definedOnly != rhs._definedOnly {return false}
     if lhs.`in` != rhs.`in` {return false}
@@ -4607,13 +4607,13 @@ extension Validate_EnumRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImple
 }
 
 extension Validate_MessageRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MessageRules"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".MessageRules"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "skip"),
     2: .same(proto: "required"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -4626,7 +4626,7 @@ extension Validate_MessageRules: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._skip {
       try visitor.visitSingularBoolField(value: v, fieldNumber: 1)
     }
@@ -4636,7 +4636,7 @@ extension Validate_MessageRules: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Validate_MessageRules, rhs: Validate_MessageRules) -> Bool {
+  public static func ==(lhs: Validate_MessageRules, rhs: Validate_MessageRules) -> Bool {
     if lhs._skip != rhs._skip {return false}
     if lhs._required != rhs._required {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -4645,8 +4645,8 @@ extension Validate_MessageRules: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
 }
 
 extension Validate_RepeatedRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".RepeatedRules"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".RepeatedRules"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "min_items"),
     2: .standard(proto: "max_items"),
     3: .same(proto: "unique"),
@@ -4681,7 +4681,7 @@ extension Validate_RepeatedRules: SwiftProtobuf.Message, SwiftProtobuf._MessageI
     return _storage
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -4700,7 +4700,7 @@ extension Validate_RepeatedRules: SwiftProtobuf.Message, SwiftProtobuf._MessageI
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._minItems {
         try visitor.visitSingularUInt64Field(value: v, fieldNumber: 1)
@@ -4721,7 +4721,7 @@ extension Validate_RepeatedRules: SwiftProtobuf.Message, SwiftProtobuf._MessageI
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Validate_RepeatedRules, rhs: Validate_RepeatedRules) -> Bool {
+  public static func ==(lhs: Validate_RepeatedRules, rhs: Validate_RepeatedRules) -> Bool {
     if lhs._storage !== rhs._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -4741,8 +4741,8 @@ extension Validate_RepeatedRules: SwiftProtobuf.Message, SwiftProtobuf._MessageI
 }
 
 extension Validate_MapRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MapRules"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".MapRules"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "min_pairs"),
     2: .standard(proto: "max_pairs"),
     3: .standard(proto: "no_sparse"),
@@ -4780,7 +4780,7 @@ extension Validate_MapRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImplem
     return _storage
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -4800,7 +4800,7 @@ extension Validate_MapRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImplem
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._minPairs {
         try visitor.visitSingularUInt64Field(value: v, fieldNumber: 1)
@@ -4824,7 +4824,7 @@ extension Validate_MapRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImplem
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Validate_MapRules, rhs: Validate_MapRules) -> Bool {
+  public static func ==(lhs: Validate_MapRules, rhs: Validate_MapRules) -> Bool {
     if lhs._storage !== rhs._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -4845,14 +4845,14 @@ extension Validate_MapRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImplem
 }
 
 extension Validate_AnyRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".AnyRules"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".AnyRules"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "required"),
     2: .same(proto: "in"),
     3: .standard(proto: "not_in"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -4866,7 +4866,7 @@ extension Validate_AnyRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImplem
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._required {
       try visitor.visitSingularBoolField(value: v, fieldNumber: 1)
     }
@@ -4879,7 +4879,7 @@ extension Validate_AnyRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImplem
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Validate_AnyRules, rhs: Validate_AnyRules) -> Bool {
+  public static func ==(lhs: Validate_AnyRules, rhs: Validate_AnyRules) -> Bool {
     if lhs._required != rhs._required {return false}
     if lhs.`in` != rhs.`in` {return false}
     if lhs.notIn != rhs.notIn {return false}
@@ -4889,8 +4889,8 @@ extension Validate_AnyRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImplem
 }
 
 extension Validate_DurationRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".DurationRules"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".DurationRules"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "required"),
     2: .same(proto: "const"),
     3: .same(proto: "lt"),
@@ -4901,7 +4901,7 @@ extension Validate_DurationRules: SwiftProtobuf.Message, SwiftProtobuf._MessageI
     8: .standard(proto: "not_in"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -4920,7 +4920,7 @@ extension Validate_DurationRules: SwiftProtobuf.Message, SwiftProtobuf._MessageI
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._required {
       try visitor.visitSingularBoolField(value: v, fieldNumber: 1)
     }
@@ -4948,7 +4948,7 @@ extension Validate_DurationRules: SwiftProtobuf.Message, SwiftProtobuf._MessageI
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Validate_DurationRules, rhs: Validate_DurationRules) -> Bool {
+  public static func ==(lhs: Validate_DurationRules, rhs: Validate_DurationRules) -> Bool {
     if lhs._required != rhs._required {return false}
     if lhs._const != rhs._const {return false}
     if lhs._lt != rhs._lt {return false}
@@ -4963,8 +4963,8 @@ extension Validate_DurationRules: SwiftProtobuf.Message, SwiftProtobuf._MessageI
 }
 
 extension Validate_TimestampRules: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".TimestampRules"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".TimestampRules"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "required"),
     2: .same(proto: "const"),
     3: .same(proto: "lt"),
@@ -4976,7 +4976,7 @@ extension Validate_TimestampRules: SwiftProtobuf.Message, SwiftProtobuf._Message
     9: .same(proto: "within"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -4996,7 +4996,7 @@ extension Validate_TimestampRules: SwiftProtobuf.Message, SwiftProtobuf._Message
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._required {
       try visitor.visitSingularBoolField(value: v, fieldNumber: 1)
     }
@@ -5027,7 +5027,7 @@ extension Validate_TimestampRules: SwiftProtobuf.Message, SwiftProtobuf._Message
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Validate_TimestampRules, rhs: Validate_TimestampRules) -> Bool {
+  public static func ==(lhs: Validate_TimestampRules, rhs: Validate_TimestampRules) -> Bool {
     if lhs._required != rhs._required {return false}
     if lhs._const != rhs._const {return false}
     if lhs._lt != rhs._lt {return false}

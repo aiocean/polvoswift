@@ -40,8 +40,8 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 /// denotes the behavior and may affect how API tooling handles the field.
 ///
 /// Note: This enum **may** receive new values in the future.
-enum Google_Api_FieldBehavior: SwiftProtobuf.Enum {
-  typealias RawValue = Int
+public enum Google_Api_FieldBehavior: SwiftProtobuf.Enum {
+  public typealias RawValue = Int
 
   /// Conventional default for enums. Do not use this.
   case unspecified // = 0
@@ -73,11 +73,11 @@ enum Google_Api_FieldBehavior: SwiftProtobuf.Enum {
   case immutable // = 5
   case UNRECOGNIZED(Int)
 
-  init() {
+  public init() {
     self = .unspecified
   }
 
-  init?(rawValue: Int) {
+  public init?(rawValue: Int) {
     switch rawValue {
     case 0: self = .unspecified
     case 1: self = .optional
@@ -89,7 +89,7 @@ enum Google_Api_FieldBehavior: SwiftProtobuf.Enum {
     }
   }
 
-  var rawValue: Int {
+  public var rawValue: Int {
     switch self {
     case .unspecified: return 0
     case .optional: return 1
@@ -107,7 +107,7 @@ enum Google_Api_FieldBehavior: SwiftProtobuf.Enum {
 
 extension Google_Api_FieldBehavior: CaseIterable {
   // The compiler won't synthesize support with the UNRECOGNIZED case.
-  static var allCases: [Google_Api_FieldBehavior] = [
+  public static var allCases: [Google_Api_FieldBehavior] = [
     .unspecified,
     .optional,
     .required,
@@ -142,18 +142,18 @@ extension SwiftProtobuf.Google_Protobuf_FieldOptions {
   ///   google.protobuf.Timestamp expire_time = 1
   ///     [(google.api.field_behavior) = OUTPUT_ONLY,
   ///      (google.api.field_behavior) = IMMUTABLE];
-  var Google_Api_fieldBehavior: [Google_Api_FieldBehavior] {
+  public var Google_Api_fieldBehavior: [Google_Api_FieldBehavior] {
     get {return getExtensionValue(ext: Google_Api_Extensions_field_behavior) ?? []}
     set {setExtensionValue(ext: Google_Api_Extensions_field_behavior, value: newValue)}
   }
   /// Returns true if extension `Google_Api_Extensions_field_behavior`
   /// has been explicitly set.
-  var hasGoogle_Api_fieldBehavior: Bool {
+  public var hasGoogle_Api_fieldBehavior: Bool {
     return hasExtensionValue(ext: Google_Api_Extensions_field_behavior)
   }
   /// Clears the value of extension `Google_Api_Extensions_field_behavior`.
   /// Subsequent reads from it will return its default value.
-  mutating func clearGoogle_Api_fieldBehavior() {
+  public mutating func clearGoogle_Api_fieldBehavior() {
     clearExtensionValue(ext: Google_Api_Extensions_field_behavior)
   }
 
@@ -165,7 +165,7 @@ extension SwiftProtobuf.Google_Protobuf_FieldOptions {
 /// this .proto file. It can be used any place an `SwiftProtobuf.ExtensionMap` is needed
 /// in parsing, or it can be combined with other `SwiftProtobuf.SimpleExtensionMap`s to create
 /// a larger `SwiftProtobuf.SimpleExtensionMap`.
-let Google_Api_FieldBehavior_Extensions: SwiftProtobuf.SimpleExtensionMap = [
+public let Google_Api_FieldBehavior_Extensions: SwiftProtobuf.SimpleExtensionMap = [
   Google_Api_Extensions_field_behavior
 ]
 
@@ -185,7 +185,7 @@ let Google_Api_FieldBehavior_Extensions: SwiftProtobuf.SimpleExtensionMap = [
 ///   google.protobuf.Timestamp expire_time = 1
 ///     [(google.api.field_behavior) = OUTPUT_ONLY,
 ///      (google.api.field_behavior) = IMMUTABLE];
-let Google_Api_Extensions_field_behavior = SwiftProtobuf.MessageExtension<SwiftProtobuf.PackedEnumExtensionField<Google_Api_FieldBehavior>, SwiftProtobuf.Google_Protobuf_FieldOptions>(
+public let Google_Api_Extensions_field_behavior = SwiftProtobuf.MessageExtension<SwiftProtobuf.PackedEnumExtensionField<Google_Api_FieldBehavior>, SwiftProtobuf.Google_Protobuf_FieldOptions>(
   _protobuf_fieldNumber: 1052,
   fieldName: "google.api.field_behavior"
 )
@@ -193,7 +193,7 @@ let Google_Api_Extensions_field_behavior = SwiftProtobuf.MessageExtension<SwiftP
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
 extension Google_Api_FieldBehavior: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "FIELD_BEHAVIOR_UNSPECIFIED"),
     1: .same(proto: "OPTIONAL"),
     2: .same(proto: "REQUIRED"),
